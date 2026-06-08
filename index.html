@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hiring Manager Simulator - Surviving Corporate Recruitment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Sound Synth Controls (Hidden but scriptable) -->
+  <div id="audio-indicator" class="audio-control tooltip" data-tooltip="Mute/Unmute Audio">
+    <button id="mute-btn" class="audio-btn">🔊</button>
+  </div>
+
+  <!-- Main Game Container -->
+  <div class="game-wrapper">
+    
+    <!-- Top Dashboard: Day, Score & Stat Bars -->
+    <header class="game-header">
+      <div class="brand-section">
+        <h1 class="logo-text">The Hiring Manager <span class="accent-text">Simulator</span></h1>
+        <div class="badge difficulty-badge" id="current-diff-display">Junior Recruiter</div>
+      </div>
+      
+      <div class="game-meta">
+        <div class="meta-item day-counter">
+          <div class="meta-label">DAYS SURVIVED</div>
+          <div class="meta-value" id="days-count">01<span class="max-val">/90</span></div>
+        </div>
+        <div class="meta-item hires-counter">
+          <div class="meta-label">HIRES CLOSED</div>
+          <div class="meta-value" id="hires-count">00<span class="max-val">/10</span></div>
+        </div>
+      </div>
+
+      <!-- 4 Core Metrics -->
+      <div class="metrics-container">
+        <!-- Hiring Manager Happiness -->
+        <div class="metric-card" id="metric-happiness-card">
+          <div class="metric-info">
+            <span class="metric-icon">❤️</span>
+            <span class="metric-name">HM Happiness</span>
+            <span class="metric-percent" id="pct-happiness">80%</span>
+          </div>
+          <div class="metric-bar-bg">
+            <div class="metric-bar-fill fill-happiness" id="bar-happiness" style="width: 80%;"></div>
+          </div>
+          <div class="metric-emojis" id="emojis-happiness">❤️❤️❤️❤️❤️</div>
+        </div>
+
+        <!-- Candidate Experience -->
+        <div class="metric-card" id="metric-candidate-card">
+          <div class="metric-info">
+            <span class="metric-icon">⭐</span>
+            <span class="metric-name">Candidate CX</span>
+            <span class="metric-percent" id="pct-candidate">80%</span>
+          </div>
+          <div class="metric-bar-bg">
+            <div class="metric-bar-fill fill-candidate" id="bar-candidate" style="width: 80%;"></div>
+          </div>
+          <div class="metric-emojis" id="emojis-candidate">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <!-- Recruiter Sanity -->
+        <div class="metric-card" id="metric-sanity-card">
+          <div class="metric-info">
+            <span class="metric-icon">🧠</span>
+            <span class="metric-name">Recruiter Sanity</span>
+            <span class="metric-percent" id="pct-sanity">80%</span>
+          </div>
+          <div class="metric-bar-bg">
+            <div class="metric-bar-fill fill-sanity" id="bar-sanity" style="width: 80%;"></div>
+          </div>
+          <div class="metric-emojis" id="emojis-sanity">🧠🧠🧠🧠🧠</div>
+        </div>
+
+        <!-- Time Remaining / Speed -->
+        <div class="metric-card" id="metric-time-card">
+          <div class="metric-info">
+            <span class="metric-icon">⏰</span>
+            <span class="metric-name">Time Remaining</span>
+            <span class="metric-percent" id="pct-time">80%</span>
+          </div>
+          <div class="metric-bar-bg">
+            <div class="metric-bar-fill fill-time" id="bar-time" style="width: 80%;"></div>
+          </div>
+          <div class="metric-emojis" id="emojis-time">⏰⏰⏰⏰⏰</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Workspace Layout -->
+    <main class="game-main">
+      
+      <!-- Left: Office Viewport (Avatars, Speech Bubble, Visual Environment) -->
+      <section class="office-panel glass-panel">
+        <div class="panel-header">
+          <span class="pulse-indicator"></span>
+          <h2>Corporate Meeting Room #404</h2>
+        </div>
+        
+        <!-- Office Character Viewport -->
+        <div class="office-viewport">
+          <!-- Background Window Showing Day/Night Cycles or Office Items -->
+          <div class="office-bg-decor">
+            <div class="office-window">
+              <div class="window-sky" id="office-sky"></div>
+              <div class="window-sun-moon" id="office-sun-moon"></div>
+              <div class="window-skyline"></div>
+            </div>
+            <div class="office-plant"></div>
+            <div class="office-whiteboard">
+              <div class="whiteboard-title">Q2 TARGETS</div>
+              <div class="whiteboard-content" id="board-targets">Hire 10 Devs<br>Budget: Low<br>Morale: Lower</div>
+            </div>
+          </div>
+
+          <!-- Speech Bubble -->
+          <div class="speech-bubble-container" id="speech-container">
+            <div class="speaker-name" id="speaker-title">Hiring Manager</div>
+            <div class="speech-bubble">
+              <p id="speaker-quote">"We need a Principal AI Architect with 15 years experience and a budget of peanuts. Please source 50 resumes by tomorrow."</p>
+            </div>
+          </div>
+
+          <!-- Dynamic SVG/CSS Avatar -->
+          <div class="avatar-container" id="avatar-container">
+            <svg class="avatar-svg" viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+              <!-- Definitions for shadows and gradients -->
+              <defs>
+                <linearGradient id="avatar-skin-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fed7aa" />
+                  <stop offset="100%" stop-color="#fdba74" />
+                </linearGradient>
+                <linearGradient id="hair-grad-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#334155" />
+                  <stop offset="100%" stop-color="#0f172a" />
+                </linearGradient>
+                <linearGradient id="hair-grad-blonde" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#fef08a" />
+                  <stop offset="100%" stop-color="#eab308" />
+                </linearGradient>
+                <linearGradient id="hair-grad-ginger" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#f97316" />
+                  <stop offset="100%" stop-color="#c2410c" />
+                </linearGradient>
+                <linearGradient id="suit-grad-navy" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1e3a8a" />
+                  <stop offset="100%" stop-color="#172554" />
+                </linearGradient>
+                <linearGradient id="suit-grad-grey" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#475569" />
+                  <stop offset="100%" stop-color="#1e293b" />
+                </linearGradient>
+              </defs>
+
+              <!-- Suit/Shoulders -->
+              <path class="avatar-element shirt" d="M 50,220 L 150,220 L 170,250 L 30,250 Z" fill="#ffffff" />
+              <path class="avatar-element suit" id="avatar-suit" d="M 30,250 L 70,220 L 85,250 L 115,250 L 130,220 L 170,250 Z" fill="url(#suit-grad-navy)" />
+              <polygon class="avatar-element tie" id="avatar-tie" points="95,220 105,220 108,245 100,250 92,245" fill="#ef4444" />
+
+              <!-- Neck -->
+              <rect class="avatar-element neck" x="85" y="195" width="30" height="30" fill="#fdba74" rx="4" />
+
+              <!-- Ears -->
+              <circle class="avatar-element ear ear-left" cx="62" cy="155" r="12" fill="#fdba74" />
+              <circle class="avatar-element ear ear-right" cx="138" cy="155" r="12" fill="#fdba74" />
+
+              <!-- Head Base -->
+              <rect class="avatar-element head-base" x="65" y="110" width="70" height="95" rx="35" fill="url(#avatar-skin-grad)" />
+
+              <!-- Cheeks (Blushing/Angry) -->
+              <circle class="avatar-element cheek cheek-l" id="cheek-left" cx="80" cy="165" r="8" fill="#f43f5e" fill-opacity="0" />
+              <circle class="avatar-element cheek cheek-r" id="cheek-right" cx="120" cy="165" r="8" fill="#f43f5e" fill-opacity="0" />
+
+              <!-- Eyes Group -->
+              <g class="avatar-element eyes" id="avatar-eyes">
+                <!-- Eye Left -->
+                <circle cx="85" cy="145" r="7" fill="#ffffff" />
+                <circle id="pupil-left" cx="85" cy="145" r="3.5" fill="#0f172a" />
+                <!-- Eye Right -->
+                <circle cx="115" cy="145" r="7" fill="#ffffff" />
+                <circle id="pupil-right" cx="115" cy="145" r="3.5" fill="#0f172a" />
+              </g>
+
+              <!-- Eyebrows Group -->
+              <g class="avatar-element eyebrows" id="avatar-eyebrows" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" fill="none">
+                <path id="eyebrow-left" d="M 75,135 Q 85,133 93,138" />
+                <path id="eyebrow-right" d="M 125,135 Q 115,133 107,138" />
+              </g>
+
+              <!-- Nose -->
+              <path class="avatar-element nose" d="M 100,150 Q 96,162 100,162 Q 104,162 100,150" fill="none" stroke="#e2e8f0" stroke-width="2.5" stroke-linecap="round" />
+
+              <!-- Mouth (Changes dynamically via JS path modification) -->
+              <path class="avatar-element mouth" id="avatar-mouth" d="M 85,175 Q 100,185 115,175" fill="none" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round" />
+
+              <!-- Hair Style (Back and Front overlay) -->
+              <path class="avatar-element hair" id="avatar-hair" d="M 60,120 Q 100,60 140,120 Q 148,85 130,80 Q 100,75 70,80 Q 52,85 60,120 Z" fill="url(#hair-grad-dark)" />
+
+              <!-- Sweat drops / Stress Lines (Animated via CSS) -->
+              <g id="avatar-stress-fx" class="stress-fx">
+                <!-- Sweat drop 1 -->
+                <path d="M 62,110 Q 59,118 62,122 Q 65,118 62,110" fill="#38bdf8" opacity="0" id="sweat-1" />
+                <!-- Anger lines -->
+                <path d="M 130,122 L 138,114 M 138,122 L 130,114" stroke="#ef4444" stroke-width="2.5" opacity="0" id="anger-cross" />
+              </g>
+            </svg>
+          </div>
+          
+          <!-- Character Label / Role -->
+          <div class="character-label">
+            <span class="char-name" id="char-name">Vikram (Director of Engineering)</span>
+            <span class="char-mood" id="char-mood">😐 Normal</span>
+          </div>
+        </div>
+
+        <!-- Reality Check Sticky Note Panel -->
+        <div class="reality-advisor-container">
+          <button class="reality-btn" id="btn-reality-check">
+            <span class="btn-icon">💡</span>
+            <span class="btn-lbl">Ask AI Reality Check</span>
+          </button>
+          
+          <!-- Sticky note that flips open -->
+          <div class="sticky-note" id="reality-sticky">
+            <div class="sticky-pin">📌</div>
+            <div class="sticky-close" id="close-sticky">×</div>
+            <div class="sticky-text" id="reality-advice">
+              "Click the button to get some unsolicited recruiter wisdom..."
+            </div>
+            <div class="sticky-signature">— Antigravity recruitment advisor</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Recruiter Desk (Decision Cards, Actions, Active Role Details) -->
+      <section class="desk-panel glass-panel">
+        <div class="panel-header">
+          <span class="folder-tab">FILE: ACTIVE_SEARCH</span>
+          <h2>The Recruiter's Desk</h2>
+        </div>
+
+        <!-- Active Role Board -->
+        <div class="active-role-board" id="active-role-container">
+          <div class="role-header">
+            <h3>CURRENT REQ: <span id="active-role-title">Principal AI Engineer</span></h3>
+            <span class="role-status badge-success" id="active-role-status">Active Search</span>
+          </div>
+          <div class="role-details-grid">
+            <div class="role-detail-item">
+              <span class="detail-label">Experience:</span>
+              <span class="detail-val" id="role-exp">15+ Years</span>
+            </div>
+            <div class="role-detail-item">
+              <span class="detail-label">Location:</span>
+              <span class="detail-val" id="role-loc">Bangalore (In-Office)</span>
+            </div>
+            <div class="role-detail-item">
+              <span class="detail-label">Stack:</span>
+              <span class="detail-val" id="role-stack">LLMs, PyTorch, Distributed Systems</span>
+            </div>
+            <div class="role-detail-item">
+              <span class="detail-label">Budget:</span>
+              <span class="detail-val" id="role-budget">₹35L Max</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Section: The Scenario -->
+        <div class="scenario-card" id="scenario-card">
+          <div class="scenario-type" id="scenario-tag">EVENT</div>
+          <h3 class="scenario-title" id="scenario-title">Candidate receives another offer</h3>
+          <p class="scenario-description" id="scenario-desc">
+            Your star candidate for the AI Engineer role just informed you they received an offer from Google for 40% more salary. They want to know if we can match it.
+          </p>
+          
+          <!-- Choices Stack -->
+          <div class="choices-stack" id="choices-container">
+            <button class="choice-button">
+              <span class="choice-letter">A</span>
+              <span class="choice-text">Try to counter-offer by begging the CFO for a budget extension.</span>
+            </button>
+            <button class="choice-button">
+              <span class="choice-letter">B</span>
+              <span class="choice-text">Accelerate the process, hoping they join us for the "growth and culture."</span>
+            </button>
+            <button class="choice-button">
+              <span class="choice-letter">C</span>
+              <span class="choice-text">Engage the engineering VP to write a passionate plea on LinkedIn.</span>
+            </button>
+            <button class="choice-button">
+              <span class="choice-letter">D</span>
+              <span class="choice-text">Panic, delete their profile, and pretend they ghosted us.</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom: LinkedIn Social Feed & Hired Resumes -->
+    <footer class="game-footer">
+      <!-- LinkedIn Feed (The Office Humor) -->
+      <div class="feed-panel glass-panel">
+        <div class="feed-header">
+          <span class="linkedin-logo">in</span>
+          <h3>LinkedOut Feed</h3>
+        </div>
+        <div class="feed-posts" id="feed-posts-container">
+          <div class="feed-post">
+            <div class="post-header">
+              <div class="post-avatar">💼</div>
+              <div class="post-meta">
+                <span class="post-author">Braden Chadwick</span>
+                <span class="post-title">Thought Leader & Corporate Motivator</span>
+              </div>
+            </div>
+            <div class="post-content">
+              Today, I asked a candidate to code a new search engine on a whiteboard in binary. They cried. It showed me they lack resilience. Remember, hiring is about character, not just 'skills'. #grindset #hiring
+            </div>
+            <div class="post-stats">👍 1,204 • 💬 43 Comments</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hired Candidates Gallery -->
+      <div class="gallery-panel glass-panel">
+        <div class="panel-header">
+          <h3>Wall of Placements</h3>
+          <span id="hired-stats">0 Candidates Placed</span>
+        </div>
+        <div class="hired-gallery" id="hired-gallery-container">
+          <div class="gallery-empty-state" id="gallery-empty">
+            No hires closed yet. Make some placements to fill the wall!
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- MODAL: Start Screen / Difficulty Selection -->
+  <div class="modal-overlay" id="modal-start">
+    <div class="modal-content glass-panel bounce-in">
+      
+      <!-- SCREEN 1: Game Intro -->
+      <div id="start-screen-intro" class="modal-screen">
+        <div class="start-logo">
+          <span class="logo-emoji">🧠</span>
+          <span class="logo-emoji">📋</span>
+          <span class="logo-emoji">⏰</span>
+        </div>
+        <h2>The Hiring Manager Simulator</h2>
+        <p class="modal-sub" style="margin-bottom: 25px;">
+          Welcome to the ultimate recruitment survival game. Can you manage the ridiculous demands of hiring managers, keep candidates from ghosting, maintain your own sanity, and close 10 hires in 90 days?
+        </p>
+        <p class="modal-sub" style="font-weight: 700; color: var(--accent-gold); margin-bottom: 25px;">
+          Corporate compliance requires all new hires to pass the Recruiter Aptitude Test before starting.
+        </p>
+        <button class="primary-btn pulse-button" id="go-to-test-btn">Take Aptitude Test</button>
+      </div>
+
+      <!-- SCREEN 2: Recruiter Aptitude Test -->
+      <div id="start-screen-test" class="modal-screen hidden" style="width: 100%; text-align: left;">
+        <div class="scenario-type" style="color: var(--accent-gold); font-weight: 800; margin-bottom: 8px;">Aptitude Trial Question</div>
+        <h3 style="font-family: var(--font-title); font-size: 1.4rem; font-weight: 800; margin-bottom: 12px; text-align: center;">The Compensation Conundrum</h3>
+        <p class="modal-sub" style="text-align: left; margin-bottom: 20px; font-size: 0.9rem; max-width: 100%;">
+          A candidate with 3 competing offers asks: <strong>"Can you share the approved budget range for this role?"</strong> Your hiring manager has explicitly told you the budget is secret. How do you handle this?
+        </p>
+        
+        <div class="choices-stack" id="test-choices" style="display: flex; flex-direction: column; gap: 10px;">
+          <button class="choice-button test-choice-btn" data-score="correct" data-feedback="Corporate double-speak! The candidate is confused but agrees to a technical interview. You scored +15 Compliance points.">
+            <span class="choice-letter">A</span>
+            <span class="choice-text">Explain that the compensation is 'highly competitive' and 'aligned with value impact metrics' without giving a single number.</span>
+          </button>
+          <button class="choice-button test-choice-btn" data-score="incorrect" data-feedback="Oh no! The candidate accepts a transparent offer at another company. Your manager accuses you of 'lacking strategic negotiation skills'.">
+            <span class="choice-letter">B</span>
+            <span class="choice-text">Be transparent and share the exact number. Transparency builds candidate trust!</span>
+          </button>
+          <button class="choice-button test-choice-btn" data-score="chaotic" data-feedback="A bold move. The candidate laughs hysterically, thinking it's a test. They schedule a follow-up call.">
+            <span class="choice-letter">C</span>
+            <span class="choice-text">Send them a smiling emoji and request their last 3 months of payslips.</span>
+          </button>
+          <button class="choice-button test-choice-btn" data-score="crying" data-feedback="Highly realistic. You spend 2 hours crying in the copy room. The candidate ghosted you anyway, saving you time.">
+            <span class="choice-letter">D</span>
+            <span class="choice-text">Mute your microphone, cry silently, and delete their LinkedIn profile.</span>
+          </button>
+        </div>
+
+        <!-- Feedback Box -->
+        <div id="test-feedback-box" class="hidden" style="margin-top: 20px; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.15);">
+          <h4 id="test-feedback-title" style="font-family: var(--font-title); font-weight: 700; font-size: 0.95rem; margin-bottom: 6px;">Evaluation:</h4>
+          <p id="test-feedback-text" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;"></p>
+          <button class="primary-btn" id="go-to-diff-btn" style="margin-top: 15px; padding: 8px 18px; font-size: 0.85rem; display: block; margin-left: auto;">Proceed to Selection</button>
+        </div>
+      </div>
+
+      <!-- SCREEN 3: Difficulty & Start -->
+      <div id="start-screen-diff" class="modal-screen hidden" style="width: 100%;">
+        <div class="start-logo">
+          <span class="logo-emoji">🏆</span>
+        </div>
+        <h2>Test Cleared (Barely)</h2>
+        <p class="modal-sub" style="margin-bottom: 20px; max-width: 100%;">
+          Compliance has approved your trial file. You are now authorized to handle real engineering requirements. Please select your official recruiter rank:
+        </p>
+        
+        <div class="difficulty-selection">
+          <div class="diff-cards-grid">
+            <!-- Junior Recruiter -->
+            <div class="diff-card active" data-difficulty="junior">
+              <div class="diff-header">
+                <span class="diff-icon">🌱</span>
+                <h4>Junior Recruiter</h4>
+              </div>
+              <p>For players who want a reasonable chance at survival. Managers have patience, and salaries are competitive.</p>
+              <div class="diff-perks">
+                <span>Sanity: 100%</span>
+                <span>Budgets: Flex</span>
+              </div>
+            </div>
+
+            <!-- Senior Recruiter -->
+            <div class="diff-card" data-difficulty="senior">
+              <div class="diff-header">
+                <span class="diff-icon">🔥</span>
+                <h4>Senior Recruiter</h4>
+              </div>
+              <p>The standard tech recruiting experience. High stress, budget limits, and candidates with leverage.</p>
+              <div class="diff-perks">
+                <span>Sanity: 80%</span>
+                <span>Budgets: Limited</span>
+              </div>
+            </div>
+
+            <!-- Executive Recruiting -->
+            <div class="diff-card" data-difficulty="executive">
+              <div class="diff-header">
+                <span class="diff-icon">💀</span>
+                <h4>Executive Recruiter</h4>
+              </div>
+              <p>Recruiting on expert mode. Unreasonable expectations, zero budget, and candidates who expect equity in the moon.</p>
+              <div class="diff-perks">
+                <span>Sanity: 60%</span>
+                <span>Budgets: Peanuts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="primary-btn pulse-button" id="start-game-btn" style="margin-top: 25px;">Enter the Corporate Grind</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL: Game Over -->
+  <div class="modal-overlay hidden" id="modal-gameover">
+    <div class="modal-content glass-panel animate-gameover">
+      <div class="defeat-icon">🚫</div>
+      <h2 id="defeat-title">You've Been Terminated!</h2>
+      <p class="modal-sub" id="defeat-reason">
+        Your Recruiter Sanity hit 0%. You were found crying under your desk trying to source Kubernetes engineers with 25 years of experience.
+      </p>
+      
+      <div class="stats-report">
+        <div class="report-row">
+          <span>Days Survived:</span>
+          <span class="report-val" id="report-days">12 / 90</span>
+        </div>
+        <div class="report-row">
+          <span>Successful Hires:</span>
+          <span class="report-val" id="report-hires">2 / 10</span>
+        </div>
+        <div class="report-row">
+          <span>Final HM Happiness:</span>
+          <span class="report-val" id="report-hm">45%</span>
+        </div>
+        <div class="report-row">
+          <span>Final Candidate NPS:</span>
+          <span class="report-val" id="report-cx">30%</span>
+        </div>
+      </div>
+
+      <button class="primary-btn" id="restart-game-btn">Update Resume & Try Again</button>
+    </div>
+  </div>
+
+  <!-- MODAL: Victory Screen (Recruitment Legend) -->
+  <div class="modal-overlay hidden" id="modal-victory">
+    <!-- Confetti canvas overlay -->
+    <canvas id="confetti-canvas"></canvas>
+    
+    <div class="modal-content glass-panel victory-card animate-victory">
+      <div class="victory-banner">🏆</div>
+      <h2>Recruitment Legend!</h2>
+      <p class="modal-sub">
+        Incredible! You survived 90 days of corporate chaos, closed the required 10 hires, and kept your sanity intact. The CEO has authorized a budget for a single box of donuts.
+      </p>
+
+      <div class="office-party-animation">
+        <!-- Floating party emojis and characters -->
+        <div class="party-dancer dancer-1">🕺</div>
+        <div class="party-dancer dancer-2">💃</div>
+        <div class="party-dancer dancer-3">🍕</div>
+        <div class="party-dancer dancer-4">🎈</div>
+      </div>
+
+      <div class="stats-report">
+        <div class="report-row">
+          <span>Days Survived:</span>
+          <span class="report-val text-gold">90 / 90</span>
+        </div>
+        <div class="report-row">
+          <span>Total Placements:</span>
+          <span class="report-val text-gold" id="vic-hires">12 Hires</span>
+        </div>
+        <div class="report-row">
+          <span>Manager Satisfaction:</span>
+          <span class="report-val" id="vic-hm">82%</span>
+        </div>
+        <div class="report-row">
+          <span>Candidate NPS:</span>
+          <span class="report-val" id="vic-cx">78%</span>
+        </div>
+        <div class="report-row">
+          <span>Sanity Remaining:</span>
+          <span class="report-val" id="vic-sanity">32%</span>
+        </div>
+      </div>
+
+      <button class="primary-btn gold-btn" id="victory-restart-btn">Start a New Quarter</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
