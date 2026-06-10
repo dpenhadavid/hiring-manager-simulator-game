@@ -674,6 +674,18 @@
     </div>
   </div>
 
+  <!-- MODAL: Pipeline Collapse -->
+  <div class="modal-overlay hidden" id="modal-collapse" style="z-index: 1010;">
+    <div class="modal-content glass-panel bounce-in" style="max-width: 480px; border-color: rgba(239, 68, 68, 0.4); box-shadow: 0 0 30px rgba(239, 68, 68, 0.15);">
+      <div class="defeat-icon" style="background: rgba(239, 68, 68, 0.1); border-color: var(--accent-danger); font-size: 2.5rem; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid var(--accent-danger);">❌</div>
+      <h2 style="color: var(--accent-danger); font-family: var(--font-title); font-weight: 800; font-size: 1.8rem; margin: 0;">Pipeline Collapse!</h2>
+      <p class="modal-sub" id="collapse-reason" style="font-size: 0.95rem; color: var(--text-light); line-height: 1.5; margin: 0 0 10px 0; text-align: center;">
+        The candidate has ghosted your pipeline.
+      </p>
+      <button class="primary-btn" id="collapse-continue-btn" style="background: var(--accent-danger); border-color: var(--accent-danger); font-weight: 800; padding: 10px 24px; font-size: 0.95rem; width: 100%;">Acknowledge & Re-open Role</button>
+    </div>
+  </div>
+
   <script src="game.js"></script>
 </body>
 </html>

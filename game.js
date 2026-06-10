@@ -1099,6 +1099,43 @@ function handleChoice(choice, scenario) {
     synth.playError();
   }
   
+  // Calculate pipeline collapse risk (Ghosting / Manager veto / Offer decline)
+  let collapse = false;
+  let collapseReason = "";
+  
+  if (state.roleProgress === 1 && choice.metrics.candidate < 0) { // Interviewing stage
+    const baseChance = state.difficulty === 'executive' ? 0.25 : state.difficulty === 'senior' ? 0.15 : 0.05;
+    const statPenalty = state.metrics.candidate < 40 ? 0.20 : 0;
+    if (Math.random() < (baseChance + statPenalty)) {
+      collapse = true;
+      collapseReason = "Candidate Ghosted: The candidate withdrew after an awkward interview step, citing 'alignment mismatch with company values' and a better work-life culture elsewhere.";
+    }
+  } else if (state.roleProgress === 2 && choice.metrics.happiness < 0) { // Feedback stage
+    const baseChance = state.difficulty === 'executive' ? 0.25 : state.difficulty === 'senior' ? 0.15 : 0.05;
+    const statPenalty = state.metrics.happiness < 40 ? 0.20 : 0;
+    if (Math.random() < (baseChance + statPenalty)) {
+      collapse = true;
+      collapseReason = "Manager Veto: The Hiring Manager rejected the candidate, stating they 'lacked the key leadership metrics' and 'would not adapt to our fast-paced deliverables'.";
+    }
+  } else if (state.roleProgress === 3 && (choice.metrics.candidate < 0 || choice.metrics.happiness < 0)) { // Offer stage
+    const baseChance = state.difficulty === 'executive' ? 0.30 : state.difficulty === 'senior' ? 0.20 : 0.08;
+    const statPenalty = state.metrics.candidate < 40 ? 0.20 : 0;
+    if (Math.random() < (baseChance + statPenalty)) {
+      collapse = true;
+      collapseReason = "Offer Declined: The candidate rejected the offer in favor of another firm that offered higher base pay and fully remote flexibility.";
+    }
+  }
+
+  if (collapse) {
+    synth.playError();
+    document.getElementById("collapse-reason").innerText = collapseReason;
+    document.getElementById("modal-collapse").classList.remove("hidden");
+    addFeedPost(`❌ PIPELINE FAILURE: ${collapseReason.split(":")[0]}!`, state.activeCharacter.name);
+    progressDay();
+    checkGameEnd();
+    return;
+  }
+
   // Move scenario stages
   if (scenario.id && scenario.id.startsWith("src_")) {
     state.roleProgress = 1;
@@ -1232,11 +1269,12 @@ function triggerChaosEvent() {
   choicesContainer.innerHTML = "";
   
   const shuffledChoices = shuffle([...event.choices]);
+  const letters = ["A", "B", "C", "D"];
   shuffledChoices.forEach((choice, index) => {
     const btn = document.createElement("button");
     btn.className = "choice-button";
     btn.innerHTML = `
-      <span class="choice-letter">${index === 0 ? 'A' : 'B'}</span>
+      <span class="choice-letter">${letters[index] || 'A'}</span>
       <span class="choice-text">${choice.text}</span>
     `;
     btn.addEventListener("click", () => {
@@ -1763,11 +1801,18 @@ document.addEventListener("DOMContentLoaded", () => {
     resetStartModal();
   });
 
+  document.getElementById("collapse-continue-btn").addEventListener("click", () => {
+    synth.playClack();
+    document.getElementById("modal-collapse").classList.add("hidden");
+    generateNewRole();
+  });
+
   function resetStartModal() {
     document.getElementById("start-screen-intro").classList.remove("hidden");
     document.getElementById("start-screen-test").classList.add("hidden");
     document.getElementById("start-screen-country").classList.add("hidden");
     document.getElementById("start-screen-diff").classList.add("hidden");
+    document.getElementById("modal-collapse").classList.add("hidden");
     document.getElementById("test-feedback-box").classList.add("hidden");
     document.querySelectorAll(".test-choice-btn").forEach(b => b.classList.remove("active"));
     document.querySelectorAll(".country-card").forEach(b => b.classList.remove("active"));
