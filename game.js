@@ -1059,12 +1059,13 @@ function loadScenario(scenario) {
   // Calculate description based on scenario
   document.getElementById("scenario-desc").innerText = `Requirements match: ${state.activeRole.title} (${state.activeRole.budget}). Action required.`;
   
-  // Render choices
+  // Render choices (shuffled dynamically to prevent Option 1 blind-clicking exploit)
   const choicesContainer = document.getElementById("choices-container");
   choicesContainer.innerHTML = "";
   
   const letters = ["A", "B", "C", "D"];
-  scenario.choices.forEach((choice, index) => {
+  const shuffledChoices = shuffle([...scenario.choices]);
+  shuffledChoices.forEach((choice, index) => {
     const btn = document.createElement("button");
     btn.className = "choice-button";
     btn.innerHTML = `
@@ -1129,11 +1130,16 @@ function closePlacement() {
   synth.playSuccess();
   state.hiresClosed += 1;
   
-  // Metric boost
-  applyMetricChange('happiness', 25);
-  applyMetricChange('candidate', 15);
-  applyMetricChange('sanity', 20);
-  applyMetricChange('time', 30);
+  // Metric boost (Tuned for tighter complexity & challenge)
+  const happinessBoost = state.difficulty === 'executive' ? 10 : state.difficulty === 'senior' ? 15 : 25;
+  const candidateBoost = state.difficulty === 'executive' ? 5 : state.difficulty === 'senior' ? 10 : 15;
+  const sanityBoost = state.difficulty === 'executive' ? 10 : state.difficulty === 'senior' ? 15 : 20;
+  const timeBoost = state.difficulty === 'executive' ? 15 : state.difficulty === 'senior' ? 20 : 30;
+
+  applyMetricChange('happiness', happinessBoost);
+  applyMetricChange('candidate', candidateBoost);
+  applyMetricChange('sanity', sanityBoost);
+  applyMetricChange('time', timeBoost);
   
   // Add placement card
   const gallery = document.getElementById("hired-gallery-container");
@@ -1173,9 +1179,9 @@ function closePlacement() {
 function progressDay() {
   state.day += 1;
   
-  // Day-based overhead costs
-  const sanityDeduction = state.difficulty === 'executive' ? -3 : -1;
-  const timeDeduction = state.difficulty === 'junior' ? -2 : -4;
+  // Day-based overhead costs (Tuned for tighter complexity & challenge)
+  const sanityDeduction = state.difficulty === 'executive' ? -3 : state.difficulty === 'senior' ? -2 : -1;
+  const timeDeduction = state.difficulty === 'executive' ? -6 : state.difficulty === 'senior' ? -5 : -3;
   
   applyMetricChange('sanity', sanityDeduction);
   applyMetricChange('time', timeDeduction);
@@ -1225,7 +1231,8 @@ function triggerChaosEvent() {
   const choicesContainer = document.getElementById("choices-container");
   choicesContainer.innerHTML = "";
   
-  event.choices.forEach((choice, index) => {
+  const shuffledChoices = shuffle([...event.choices]);
+  shuffledChoices.forEach((choice, index) => {
     const btn = document.createElement("button");
     btn.className = "choice-button";
     btn.innerHTML = `
