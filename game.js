@@ -210,12 +210,255 @@ const CHARACTERS = {
 };
 
 // ==========================================================================
+// 2.1 Regional Configurations & Databases
+// ==========================================================================
+const REGIONS = {
+  us: {
+    name: "United States",
+    currency: "$",
+    currencyLabel: "USD",
+    names: {
+      managers: ["Chad", "Brenda", "Marcus", "Braden", "Sarah"],
+      candidates: ["Austin", "Hunter", "Eugene", "Emily", "Taylor"]
+    },
+    locations: ["Silicon Valley (Hybrid)", "San Francisco Office", "Austin Remote", "Seattle Tech Center"],
+    specialRule: "RSUs & Stock Options: Candidates demand stock equity and RSU plans."
+  },
+  in: {
+    name: "India",
+    currency: "₹",
+    currencyLabel: "LPA",
+    names: {
+      managers: ["Vikram", "Shalini", "Amit", "Rajesh", "Pooja"],
+      candidates: ["Priya", "Rajesh", "Karan", "Aditi", "Rahul"]
+    },
+    locations: ["Bengaluru Office (Outer Ring Road)", "Mumbai Corporate Park", "Noida Tech Zone", "Gurgaon Cyber City"],
+    specialRule: "Notice Period: Candidates have 90-day notice periods and CTC-shopping hikes."
+  },
+  eu: {
+    name: "United Kingdom & Europe",
+    currency: "€",
+    currencyLabel: "EUR",
+    names: {
+      managers: ["Alistair", "Gemma", "Nigel", "Oliver", "Fiona"],
+      candidates: ["Chloe", "William", "Niamh", "Lucas", "Sophie"]
+    },
+    locations: ["London Canary Wharf Office", "Berlin Tech Hub", "Paris R&D Center", "Amsterdam Hybrid Hub"],
+    specialRule: "Mandatory Holidays: Workers get 30 days PTO. GDPR & strict union compliance required."
+  },
+  cn: {
+    name: "China",
+    currency: "¥",
+    currencyLabel: "CNY",
+    names: {
+      managers: ["Director Liang", "VP Zhao", "Tech Lead Chen", "Manager Wu", "VP Wang"],
+      candidates: ["Wei", "Min", "Yang", "Xing", "Ruolan"]
+    },
+    locations: ["Shenzhen High-Tech Park", "Beijing Zhongguancun Office", "Shanghai Pudong Tower"],
+    specialRule: "996 Work Hour Culture: Extremely fast turnaround times and high burnout fatigue."
+  },
+  sg: {
+    name: "Singapore",
+    currency: "$",
+    currencyLabel: "SGD",
+    names: {
+      managers: ["Jian", "Devon", "Sarah", "Kim", "Lim"],
+      candidates: ["Ryan", "Mei", "Arjun", "Bao", "Keith"]
+    },
+    locations: ["Marina Bay Financial Center", "Remote (Outsourced to Bali)", "One-North Tech Park"],
+    specialRule: "EP Bureaucracy: Visa point calculations are highly regulated."
+  },
+  jp: {
+    name: "Japan",
+    currency: "¥",
+    currencyLabel: "JPY",
+    names: {
+      managers: ["Sato-san", "Tanaka-san", "Suzuki-san", "Watanabe-san", "Nakamura-san"],
+      candidates: ["Hiroshi", "Yuki", "Kenji", "Mai", "Takashi"]
+    },
+    locations: ["Tokyo Shibuya Office", "Osaka Tech Center", "Yokohama Hub"],
+    specialRule: "Hanko Stamp Approvals: Multiphase hierarchal manager signs required for decisions."
+  },
+  br: {
+    name: "LATAM",
+    currency: "R$",
+    currencyLabel: "BRL",
+    names: {
+      managers: ["Carlos", "Fernanda", "Matheus", "Sofia", "Ricardo"],
+      candidates: ["Diego", "Lucas", "Mariana", "Thiago", "Beatriz"]
+    },
+    locations: ["São Paulo Tech Hub", "Rio de Janeiro Office", "Nearshore Contractor (US Timezone)"],
+    specialRule: "CLT vs Contractor: LatAm candidate battles over USD salaries vs local benefits."
+  },
+  au: {
+    name: "Australia & ANZ",
+    currency: "$",
+    currencyLabel: "AUD",
+    names: {
+      managers: ["Lachlan", "Kylie", "Liam", "Mitchell", "Belinda"],
+      candidates: ["Angus", "Isla", "Hamish", "Zoe", "Connor"]
+    },
+    locations: ["Sydney Circular Quay Office", "Melbourne Tech Sandbox", "Brisbane Hybrid Space"],
+    specialRule: "Work-Life Balance: Slow hiring speed, strict 5 PM logoffs, and coffee chat interviews."
+  }
+};
+
+const REGIONAL_CHAOS_EVENTS = {
+  us: [
+    {
+      title: "🚨 Tech Lead Unlimited PTO!",
+      description: "Your tech lead took 4 weeks of unannounced 'unlimited' PTO right before the final loop.",
+      choices: [
+        {
+          text: "Wait for their return.",
+          metrics: { happiness: 10, candidate: -15, sanity: 10, time: -25 },
+          feedback: "The candidate gets another offer and drops out. Manager is glad rules were followed."
+        },
+        {
+          text: "Escalate to VP to bypass interviews.",
+          metrics: { happiness: -20, candidate: 15, sanity: -10, time: 10 },
+          feedback: "VP approves the bypass. Tech lead is furious when they return, damaging manager satisfaction."
+        }
+      ]
+    }
+  ],
+  in: [
+    {
+      title: "🚨 90-Day Notice Period Shopping!",
+      description: "During their 90-day notice period, your candidate shopping-spreed 4 counter-offers. They demand a 50% hike to join.",
+      choices: [
+        {
+          text: "Beg the CEO to match the hike.",
+          metrics: { happiness: -20, candidate: 20, sanity: -15, time: 5 },
+          feedback: "CEO matches it. You get the hire, but finance is watching your budget like a hawk."
+        },
+        {
+          text: "Refuse. Restart search.",
+          metrics: { happiness: -10, candidate: -5, sanity: -10, time: -20 },
+          feedback: "You reset the pipeline. Manager complains about the delays."
+        }
+      ]
+    }
+  ],
+  eu: [
+    {
+      title: "🚨 Mandatory Holiday Shutdown!",
+      description: "Europe shuts down for the entire month of August. All interviewers are in the South of France.",
+      choices: [
+        {
+          text: "Send 'keep warm' emails and wait.",
+          metrics: { happiness: 10, candidate: 10, sanity: 20, time: -30 },
+          feedback: "You enjoy a peaceful month. The timeline drops severely."
+        },
+        {
+          text: "Attempt to call interviewers on holiday.",
+          metrics: { happiness: -30, candidate: -10, sanity: -15, time: 10 },
+          feedback: "Interviewers ignore you. You violated the Right to Disconnect. Severe penalties."
+        }
+      ]
+    }
+  ],
+  cn: [
+    {
+      title: "🚨 996 Fatigue Burnout!",
+      description: "Your team lead was hospitalized due to working late shifts. Sourcing pipeline halts.",
+      choices: [
+        {
+          text: "Send them fruit baskets and wait.",
+          metrics: { happiness: 15, candidate: -10, sanity: 15, time: -25 },
+          feedback: "Morale rises, but candidates grow impatient with the silent pipeline."
+        },
+        {
+          text: "Ask another lead to take over immediately.",
+          metrics: { happiness: -15, candidate: 10, sanity: -20, time: 10 },
+          feedback: "Interviews proceed, but the new lead has no context on the role requirements."
+        }
+      ]
+    }
+  ],
+  sg: [
+    {
+      title: "🚨 EP Points Quota Shift!",
+      description: "The Ministry of Manpower changes points quotas for tech visas. Active candidate no longer qualifies.",
+      choices: [
+        {
+          text: "Request a salary hike to meet criteria.",
+          metrics: { happiness: -20, candidate: 15, sanity: -15, time: 15 },
+          feedback: "The company pays more, but matches the visa quota. Candidate is saved."
+        },
+        {
+          text: "Outsource them as a remote contractor to Bali.",
+          metrics: { happiness: 10, candidate: -15, sanity: 10, time: -10 },
+          feedback: "The candidate works remotely. You save budget but candidate misses the office energy."
+        }
+      ]
+    }
+  ],
+  jp: [
+    {
+      title: "🚨 Hanko Stamp Delay!",
+      description: "The Director is out of office, and his assistant refuses to use the Hanko stamp on the offer letter.",
+      choices: [
+        {
+          text: "Wait for Director's return.",
+          metrics: { happiness: 10, candidate: -15, sanity: 10, time: -20 },
+          feedback: "Candidate assumes they are ghosted. Company processes remain rigid."
+        },
+        {
+          text: "Attempt to forge the stamp seal.",
+          metrics: { happiness: -30, candidate: 20, sanity: -25, time: 10 },
+          feedback: "The candidate accepts. If compliance discovers it, you're toast."
+        }
+      ]
+    }
+  ],
+  br: [
+    {
+      title: "🚨 Nearshore US Dollar War!",
+      description: "A US startup offers your candidate $6,000 USD/month as a remote contractor. We pay in BRL CLT.",
+      choices: [
+        {
+          text: "Try to explain the stability of CLT benefits.",
+          metrics: { happiness: 10, candidate: -20, sanity: 10, time: -15 },
+          feedback: "Candidate prefers cash over benefits. They drop out."
+        },
+        {
+          text: "Beg manager to match in USD contracting.",
+          metrics: { happiness: -25, candidate: 25, sanity: -10, time: 10 },
+          feedback: "Manager matches. Company takes on legal risks but candidate accepts!"
+        }
+      ]
+    }
+  ],
+  au: [
+    {
+      title: "🚨 Mandatory 5 PM Logoff Lock!",
+      description: "Aussie work-life regulations shut down the corporate VPN at 5:00 PM on Friday, canceling a final interview.",
+      choices: [
+        {
+          text: "Reschedule to Monday morning.",
+          metrics: { happiness: 10, candidate: 15, sanity: 15, time: -15 },
+          feedback: "Everyone respects the boundaries. You enjoy your weekend, but lose days of progress."
+        },
+        {
+          text: "Beg tech lead to interview via personal WhatsApp.",
+          metrics: { happiness: -20, candidate: -10, sanity: -15, time: 10 },
+          feedback: "Tech lead feels micro-managed on the weekend. Souring relationships."
+        }
+      ]
+    }
+  ]
+};
+
+// ==========================================================================
 // 3. Game State
 // ==========================================================================
 let state = {
   day: 1,
   hiresClosed: 0,
   difficulty: 'junior',
+  country: 'us',
+  playerName: 'Anonymous Recruiter',
   metrics: {
     happiness: 80, // Hiring Manager Happiness
     candidate: 80, // Candidate Experience
@@ -228,6 +471,111 @@ let state = {
   history: [],
   realityCheckTriggered: false
 };
+
+// ==========================================================================
+// 3.1 Leaderboard Persistence System
+// ==========================================================================
+const DEFAULT_LEADERBOARD = [
+  { name: "Braden Chadwick (VP of Synergy)", score: 24000, hires: 12, days: 90, country: "us" },
+  { name: "ChatGPT (AI Sourcing Bot)", score: 18500, hires: 10, days: 90, country: "sg" },
+  { name: "Chad (Sales Ops Lead)", score: 11200, hires: 8, days: 90, country: "us" },
+  { name: "Skeptical Hiring Manager", score: 1200, hires: 1, days: 12, country: "in" }
+];
+
+function loadLeaderboard() {
+  try {
+    const data = localStorage.getItem("hiring_manager_leaderboard");
+    if (data) {
+      const parsed = JSON.parse(data);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed.sort((a, b) => b.score - a.score);
+      }
+    }
+  } catch (e) {
+    console.error("Failed to parse leaderboard: ", e);
+  }
+  return [...DEFAULT_LEADERBOARD].sort((a, b) => b.score - a.score);
+}
+
+function saveScore(name, score, hires, days) {
+  const leaderboard = loadLeaderboard();
+  leaderboard.push({
+    name: name,
+    score: score,
+    hires: hires,
+    days: days,
+    country: state.country
+  });
+  
+  // Sort descending and keep top 10
+  leaderboard.sort((a, b) => b.score - a.score);
+  if (leaderboard.length > 10) {
+    leaderboard.splice(10);
+  }
+  
+  try {
+    localStorage.setItem("hiring_manager_leaderboard", JSON.stringify(leaderboard));
+  } catch (e) {
+    console.error("Failed to save score: ", e);
+  }
+}
+
+function renderLeaderboard(elementId, highlightName = null) {
+  const container = document.getElementById(elementId);
+  if (!container) return;
+  
+  const leaderboard = loadLeaderboard();
+  
+  let html = `
+    <div class="leaderboard-table-container">
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Recruiter</th>
+            <th style="text-align: center;">Territory</th>
+            <th style="text-align: center;">Hires</th>
+            <th style="text-align: center;">Days</th>
+            <th style="text-align: right;">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+  
+  const flags = { us: "🇺🇸", in: "🇮🇳", eu: "🇪🇺", cn: "🇨🇳", sg: "🇸🇬", jp: "🇯🇵", br: "🌎", au: "🇦🇺" };
+  
+  leaderboard.forEach((entry, idx) => {
+    const isPlayer = entry.name === highlightName;
+    const highlightClass = isPlayer ? 'class="highlight-player"' : '';
+    
+    // Rank badges for top 3
+    let rankDisplay = idx + 1;
+    if (idx < 3) {
+      rankDisplay = `<span class="rank-badge rank-${idx + 1}">${idx + 1}</span>`;
+    }
+    
+    const flag = flags[entry.country] || "🌐";
+    
+    html += `
+      <tr ${highlightClass}>
+        <td>${rankDisplay}</td>
+        <td style="max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${entry.name}</td>
+        <td style="text-align: center; font-size: 1.1rem;" title="${entry.country ? entry.country.toUpperCase() : ''}">${flag}</td>
+        <td style="text-align: center;">${entry.hires}</td>
+        <td style="text-align: center;">${entry.days}</td>
+        <td style="text-align: right; font-weight: 800; color: var(--accent-gold);">${entry.score.toLocaleString()}</td>
+      </tr>
+    `;
+  });
+  
+  html += `
+        </tbody>
+      </table>
+    </div>
+  `;
+  
+  container.innerHTML = html;
+}
 
 // ==========================================================================
 // 4. Role Templates
@@ -287,279 +635,153 @@ const ROLE_TEMPLATES = [
 // 5. Scenarios & Events Database
 // ==========================================================================
 
-// Sourcing Stage Scenarios (Role introduction)
-const SOURCING_SCENARIOS = [
-  {
-    id: "src_kubernetes_20",
-    title: "Unreasonable Tech Age Requirements",
-    description: "The manager demands a Senior Architect with 20 years of experience in Kubernetes. Kubernetes was released in 2014.",
-    speaker: "Hiring Manager",
-    mood: "NORMAL",
-    choices: [
-      {
-        text: "Start searching immediately. Time to find a time traveler.",
-        metrics: { happiness: 15, candidate: 0, sanity: -15, time: -15 },
-        feedback: "The manager is happy you 'can-do'. You, however, start looking for doctors who can manipulate physics."
-      },
-      {
-        text: "Gently explain that Kubernetes is only 12 years old.",
-        metrics: { happiness: -15, candidate: 5, sanity: 10, time: -5 },
-        feedback: "The manager sighs, 'I need someone who was thinking about it before it was released.' You negotiate the requirement to 10 years."
-      },
-      {
-        text: "Suggest Docker/Containers flexibility instead.",
-        metrics: { happiness: -5, candidate: 10, sanity: 5, time: 5 },
-        feedback: "A compromise! You agree to look for general containerization skills. Recruitment speed improves."
-      },
-      {
-        text: "Cry quietly into your keyboard.",
-        metrics: { happiness: -10, candidate: -5, sanity: 15, time: -10 },
-        feedback: "You spend the afternoon sobbing. Surprisingly, it buys you time as the manager feels awkward and goes to lunch."
-      }
-    ]
-  },
-  {
-    id: "src_urgent_friday",
-    title: "The Imminent Friday Deadline",
-    description: "'We need this Principal AI Engineer position filled by Friday afternoon. No exceptions.' It is currently Tuesday.",
-    speaker: "Hiring Manager",
-    mood: "ANGRY",
-    choices: [
-      {
-        text: "Accept the challenge and work 16-hour days.",
-        metrics: { happiness: 25, candidate: -10, sanity: -25, time: -20 },
-        feedback: "You source half-asleep candidates at 2 AM. HM is thrilled with the pipeline, but your eyes won't stop twitching."
-      },
-      {
-        text: "Explain that quality hires require at least 4-6 weeks.",
-        metrics: { happiness: -20, candidate: 10, sanity: 15, time: 5 },
-        feedback: "The manager calls you 'unaligned with corporate velocity.' But your boundaries remain intact."
-      },
-      {
-        text: "Ask for 5 additional interviewers to speed up evaluations.",
-        metrics: { happiness: -10, candidate: 5, sanity: 5, time: 10 },
-        feedback: "The manager complains about team productivity dropping, but agrees to recruit some colleagues to interview."
-      },
-      {
-        text: "Pretend your Teams connection disconnected.",
-        metrics: { happiness: -5, candidate: -5, sanity: 20, time: -15 },
-        feedback: "You pull the ethernet cord. The silent break saves your sanity, but you've lost an entire day of sourcing."
-      }
-    ]
-  }
-];
+// Scenarios & Events Database (Loaded dynamically from scenarios.json)
+let SOURCING_SCENARIOS = [];
+let CANDIDATE_SCENARIOS = [];
+let FEEDBACK_SCENARIOS = [];
+let OFFER_SCENARIOS = [];
+let CHAOS_EVENTS = [];
 
-// Interview & Candidate Stage Scenarios
-const CANDIDATE_SCENARIOS = [
-  {
-    id: "cand_comp_range",
-    title: "Candidate Demands Salary Transparency",
-    description: "Your best candidate asks: 'What is the compensation range for this position?' The budget is extremely tight.",
-    speaker: "Candidate",
-    mood: "NORMAL",
-    choices: [
-      {
-        text: "Be honest. Tell them the exact maximum budget of ₹35L.",
-        metrics: { happiness: -10, candidate: 20, sanity: 5, time: 5 },
-        feedback: "The candidate appreciates the honesty. However, the manager is furious that you didn't leave room to negotiate."
-      },
-      {
-        text: "Say compensation is 'highly competitive, based on experience'.",
-        metrics: { happiness: 10, candidate: -20, sanity: 5, time: -10 },
-        feedback: "The candidate sighs. They schedule another call but their trust in the process drops. Standard industry behavior."
-      },
-      {
-        text: "Schedule an introductory call with the Team Lead first.",
-        metrics: { happiness: -10, candidate: -5, sanity: -5, time: 15 },
-        feedback: "You kick the can down the road. The tech lead handles the pressure, saving your time, but candidate is slightly annoyed."
-      },
-      {
-        text: "Send a friendly smile emoji and ignore the question.",
-        metrics: { happiness: 5, candidate: -25, sanity: 15, time: -5 },
-        feedback: "You send '😊'. The candidate leaves you on read for 48 hours. Red flags are raised."
-      }
-    ]
-  },
-  {
-    id: "cand_coding_test",
-    title: "The 10-Hour Take-Home Coding Test",
-    description: "The team wants the candidate to build an entire microservice architecture over the weekend for their initial technical round.",
-    speaker: "Hiring Manager",
-    mood: "NORMAL",
-    choices: [
-      {
-        text: "Enforce it. Send the Github template to the candidate.",
-        metrics: { happiness: 15, candidate: -30, sanity: 10, time: -10 },
-        feedback: "Candidate replies: 'No thanks, I have a life.' and drops out of the process. Manager thinks they lacked 'hustle'."
-      },
-      {
-        text: "Push back. Propose a 1-hour live coding session instead.",
-        metrics: { happiness: -15, candidate: 25, sanity: 5, time: 10 },
-        feedback: "Candidate is delighted. The manager complains that 'anyone can fake it for an hour,' but relents."
-      },
-      {
-        text: "Offer to review the candidate's existing public portfolio.",
-        metrics: { happiness: -10, candidate: 20, sanity: 10, time: 15 },
-        feedback: "Speeds up the timeline immensely. Candidate is impressed with your flexibility."
-      },
-      {
-        text: "Do the coding test yourself to keep them in the loop.",
-        metrics: { happiness: 20, candidate: 30, sanity: -40, time: -20 },
-        feedback: "You learn Python overnight and submit the test under their name. They pass! Your sanity is in ruins."
-      }
-    ]
+async function fetchScenarios() {
+  try {
+    const response = await fetch('scenarios.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    SOURCING_SCENARIOS = data.sourcing || [];
+    CANDIDATE_SCENARIOS = data.candidate || [];
+    FEEDBACK_SCENARIOS = data.feedback || [];
+    OFFER_SCENARIOS = data.offer || [];
+    CHAOS_EVENTS = data.chaos || [];
+    console.log(`Loaded ${SOURCING_SCENARIOS.length + CANDIDATE_SCENARIOS.length + FEEDBACK_SCENARIOS.length + OFFER_SCENARIOS.length + CHAOS_EVENTS.length} scenarios successfully.`);
+    
+    // Initialize decks immediately upon loading
+    initDecks();
+  } catch (error) {
+    console.error("Error loading scenarios.json:", error);
   }
-];
+}
 
-// Feedback Stage Scenarios
-const FEEDBACK_SCENARIOS = [
-  {
-    id: "feed_more_profiles",
-    title: "The Profile Hoarder",
-    description: "After 4 rounds of interviews, the manager says: 'The candidate is perfect! But let's look at 5 more profiles just to compare.'",
-    speaker: "Hiring Manager",
-    mood: "HAPPY",
-    choices: [
-      {
-        text: "Push back hard. Warn them they will lose this candidate.",
-        metrics: { happiness: -20, candidate: 15, sanity: 15, time: 5 },
-        feedback: "Manager is grumpy but agrees to make an offer. You saved the deal."
-      },
-      {
-        text: "Continue the search and source 5 more profiles.",
-        metrics: { happiness: 20, candidate: -15, sanity: -25, time: -25 },
-        feedback: "The first candidate gets tired of waiting and signs with a competitor. You start from scratch."
-      },
-      {
-        text: "Escalate to the VP of Engineering.",
-        metrics: { happiness: -15, candidate: 5, sanity: -10, time: 15 },
-        feedback: "The VP overrides the manager, instructing them to close. You created some office friction but saved the timeline."
-      },
-      {
-        text: "Scream internally and nod politely.",
-        metrics: { happiness: 15, candidate: -10, sanity: -15, time: -15 },
-        feedback: "Your stomach lining dissolves. You source profiles while sending apologize-for-delay emails to the candidate."
-      }
-    ]
+// Shuffled Decks Engine
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
   }
-];
+  return array;
+}
 
-// Offer & Final Stage Scenarios
-const OFFER_SCENARIOS = [
-  {
-    id: "off_google_match",
-    title: "Counter-Offer Panic",
-    description: "The selected candidate just received a counter-offer from Google for 40% more than our maximum budget.",
-    speaker: "Candidate",
-    mood: "HAPPY",
-    choices: [
-      {
-        text: "Match the compensation by requesting a budget expansion.",
-        metrics: { happiness: -15, candidate: 25, sanity: -10, time: 10 },
-        feedback: "CFO yells at you for 30 minutes, but grants the exception. Candidate verbally accepts!"
-      },
-      {
-        text: "Sell the 'exceptional company culture and work-life balance'.",
-        metrics: { happiness: 5, candidate: -20, sanity: 10, time: -15 },
-        feedback: "The candidate laughs. 'Culture doesn't pay my rent.' They reject the offer."
-      },
-      {
-        text: "Engage the CEO for a personal passion outreach call.",
-        metrics: { happiness: 15, candidate: 20, sanity: 5, time: -5 },
-        feedback: "The CEO calls the candidate. They feel highly valued and accept the offer for a slightly lower bump."
-      },
-      {
-        text: "Panic, delete their profile, and pretend they ghosted.",
-        metrics: { happiness: -20, candidate: -10, sanity: 20, time: -20 },
-        feedback: "You cover your tracks. The manager is disappointed, and you've wasted weeks of progress."
-      }
-    ]
+function initDecks() {
+  state.decks = {
+    sourcing: shuffle([...SOURCING_SCENARIOS]),
+    candidate: shuffle([...CANDIDATE_SCENARIOS]),
+    feedback: shuffle([...FEEDBACK_SCENARIOS]),
+    offer: shuffle([...OFFER_SCENARIOS])
+  };
+  
+  // Combine generic and regional chaos events
+  let chaosPool = [...CHAOS_EVENTS];
+  const regEvents = REGIONAL_CHAOS_EVENTS[state.country];
+  if (regEvents && regEvents.length > 0) {
+    chaosPool = chaosPool.concat(regEvents);
   }
-];
+  state.decks.chaos = shuffle(chaosPool);
+  console.log("Decks initialized and shuffled successfully.");
+}
 
-// Random Chaos Events (Triggered on day ticks)
-const CHAOS_EVENTS = [
-  {
-    title: "🚨 Hiring Freeze Declared!",
-    description: "Global finance announces an immediate hiring freeze. All active roles are paused for 3 days.",
-    choices: [
-      {
-        text: "Write polite 'keep warm' emails to candidates.",
-        metrics: { happiness: -10, candidate: -10, sanity: 15, time: -10 },
-        feedback: "You spend days crafting messages. Candidates smell the corporate trouble."
-      },
-      {
-        text: "Use this time to clean up the ATS and sleep.",
-        metrics: { happiness: -15, candidate: -15, sanity: 25, time: -15 },
-        feedback: "The break restores your mental health, but managers blame you for lost momentum."
+function drawFromDeck(deckName, originalPool) {
+  if (!state.decks || !state.decks[deckName] || state.decks[deckName].length === 0) {
+    console.log(`Deck ${deckName} depleted. Reshuffling...`);
+    if (deckName === 'chaos') {
+      let chaosPool = [...CHAOS_EVENTS];
+      const regEvents = REGIONAL_CHAOS_EVENTS[state.country];
+      if (regEvents && regEvents.length > 0) {
+        chaosPool = chaosPool.concat(regEvents);
       }
-    ]
-  },
-  {
-    title: "🚨 Sudden Org Restructuring!",
-    description: "A leadership change occurs. Your active role's requirements completely change mid-search.",
-    choices: [
-      {
-        text: "Reword the description and start sourcing from scratch.",
-        metrics: { happiness: -5, candidate: -10, sanity: -20, time: -20 },
-        feedback: "You throw away weeks of pipeline. Back to square one."
-      },
-      {
-        text: "Confront the leadership about wasted resources.",
-        metrics: { happiness: -25, candidate: 10, sanity: 15, time: 5 },
-        feedback: "You stand up for recruitment. You are labeled 'uncooperative,' but they let you continue the original search."
-      }
-    ]
-  },
-  {
-    title: "🚨 The 20% Budget Cut!",
-    description: "Finance reduces the salary budget for your active role by 20% due to market adjustments.",
-    choices: [
-      {
-        text: "Try to renegotiate active candidates to the lower rate.",
-        metrics: { happiness: 10, candidate: -30, sanity: -15, time: -10 },
-        feedback: "Candidates feel insulted. Three of them drop out of the process immediately."
-      },
-      {
-        text: "Search for less experienced, junior-level candidates.",
-        metrics: { happiness: -15, candidate: 10, sanity: 5, time: -15 },
-        feedback: "Hiring manager is disappointed in the 'downgraded pipeline,' but the search continues."
-      }
-    ]
-  },
-  {
-    title: "🚨 Tech Lead Ghosts Interviews!",
-    description: "The technical lead goes on an unannounced 10-day digital detox, leaving candidates stranded.",
-    choices: [
-      {
-        text: "Apologize to candidates and reschedule everything.",
-        metrics: { happiness: -5, candidate: -15, sanity: -15, time: -20 },
-        feedback: "Scheduling nightmare. You lose 20% of your time remaining trying to fix calendars."
-      },
-      {
-        text: "Conduct the technical assessment yourself using AI tools.",
-        metrics: { happiness: 20, candidate: 15, sanity: -30, time: 10 },
-        feedback: "You copy questions from ChatGPT. It works, but you have no idea what 'idempotency' means."
-      }
-    ]
-  },
-  {
-    title: "🚨 Candidate Drops After Verbal Acceptance!",
-    description: "Your star candidate verbally accepted the offer yesterday, but just sent an email saying they decided to stay at their current firm.",
-    choices: [
-      {
-        text: "Restart the sourcing engine and weep.",
-        metrics: { happiness: -25, candidate: 0, sanity: -30, time: -20 },
-        feedback: "Total reset. The manager holds you personally responsible for the candidate's cold feet."
-      },
-      {
-        text: "Call them and offer a sign-on bonus.",
-        metrics: { happiness: -15, candidate: 15, sanity: -10, time: -5 },
-        feedback: "You secure a small sign-on bonus. They accept, but the manager is annoyed you spent more money."
-      }
-    ]
+      state.decks.chaos = shuffle(chaosPool);
+    } else {
+      state.decks[deckName] = shuffle([...originalPool]);
+    }
   }
-];
+  return state.decks[deckName].pop();
+}
+
+// Toast notification helper
+function showToast(message) {
+  let toast = document.querySelector(".toast-notification");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.className = "toast-notification";
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = `📋 <span>${message}</span>`;
+  toast.classList.add("show");
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+
+// Verification hashing for score submissions
+function generateVerificationCode(name, score, hires, days, region) {
+  const data = `${name}|${score}|${hires}|${days}|${region}|synergy-salt-2026`;
+  let hash = 0;
+  for (let i = 0; i < data.length; i++) {
+    hash = (hash << 5) - hash + data.charCodeAt(i);
+    hash |= 0;
+  }
+  return Math.abs(hash).toString(16).toUpperCase();
+}
+
+// Leaderboard ticket generator and clipboard exporter
+function submitScoreToGitHub() {
+  const name = state.playerName;
+  const score = state.lastScore || 0;
+  const hires = state.hiresClosed;
+  const days = state.day;
+  const region = REGIONS[state.country]?.name || state.country.toUpperCase();
+  const difficulty = state.difficulty.toUpperCase();
+  
+  const verificationCode = generateVerificationCode(name, score, hires, days, state.country);
+  const payload = btoa(unescape(encodeURIComponent(`${name}:${score}:${hires}:${days}:${state.country}`))).replace(/=/g, '');
+  
+  const title = `Leaderboard Entry: ${name} - ${score} pts`;
+  const body = `### 🏆 Hiring Manager Simulator - Score Ticket
+
+| Metric | Value |
+| :--- | :--- |
+| **Player Name** | ${name} |
+| **Territory / Region** | ${region} |
+| **Difficulty Level** | ${difficulty} |
+| **Hires Closed** | ${hires} / 10 |
+| **Days Survived** | ${days} / 90 |
+| **Final Score** | **${score} pts** |
+
+---
+
+#### 🔒 Verification Metadata
+\`\`\`
+Version: 1.0.0
+Payload: ${payload}
+Verification Code: ${verificationCode}
+\`\`\`
+
+*Instructions: Do not modify the Verification Metadata above. Just click "Submit new issue" to log your score on the leaderboard!*`;
+
+  navigator.clipboard.writeText(body).then(() => {
+    showToast("Score ticket copied to clipboard!");
+  }).catch(err => {
+    console.error("Clipboard copy failed:", err);
+  });
+  
+  const githubUrl = `https://github.com/dpenhadavid/hiring-manager-simulator-game/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+  window.open(githubUrl, "_blank");
+}
+
+
 
 // ==========================================================================
 // 6. LinkedIn Feed Content Library (LinkedOut)
@@ -644,11 +866,27 @@ function setDifficulty(diff) {
 }
 
 function initGame() {
+  if (SOURCING_SCENARIOS.length === 0) {
+    alert("Scenarios are still loading, please wait a second.");
+    return;
+  }
   state.day = 1;
   state.hiresClosed = 0;
   state.roleProgress = 0;
   state.history = [];
   state.realityCheckTriggered = false;
+  
+  // Reset and shuffle decks for the new game session
+  initDecks();
+  
+  // Set Player Name
+  const nameInput = document.getElementById("player-name");
+  let pName = nameInput ? nameInput.value.trim() : "";
+  if (!pName) {
+    const titles = ["Hustling Recruiter", "Vibe Coder", "Headhunter", "Corporate Drone", "Unicorn Chaser"];
+    pName = `${titles[Math.floor(Math.random() * titles.length)]} #${Math.floor(Math.random() * 900 + 100)}`;
+  }
+  state.playerName = pName;
   
   // Clear Placement Wall
   const gallery = document.getElementById("hired-gallery-container");
@@ -671,22 +909,53 @@ function generateNewRole() {
   const index = Math.floor(Math.random() * ROLE_TEMPLATES.length);
   const template = ROLE_TEMPLATES[index];
   
-  // Create deep copy
+  const reg = REGIONS[state.country] || REGIONS.us;
+  
+  // Pick a random manager from the country pool
+  const managerName = reg.names.managers[Math.floor(Math.random() * reg.names.managers.length)];
+  const managerChar = {
+    name: `${managerName} (${template.character.name.split(" (")[1]}`,
+    role: "Hiring Manager",
+    skin: template.character.skin,
+    hairColor: template.character.hairColor,
+    hairD: template.character.hairD,
+    suitColor: template.character.suitColor,
+    tieColor: template.character.tieColor
+  };
+  
+  // Localize location
+  const locIndex = Math.floor(Math.random() * reg.locations.length);
+  const location = reg.locations[locIndex];
+  
+  // Localize budget based on country
+  let budget = "";
+  if (state.country === 'in') {
+    const baseBudget = state.difficulty === 'junior' ? 45 : state.difficulty === 'senior' ? 30 : 18;
+    budget = `₹${Math.floor(baseBudget + Math.random() * 10)}L Max`;
+  } else if (state.country === 'jp') {
+    const baseBudget = state.difficulty === 'junior' ? 12 : state.difficulty === 'senior' ? 8 : 5;
+    budget = `¥${Math.floor(baseBudget + Math.random() * 3)}M Max`;
+  } else if (state.country === 'br') {
+    const baseBudget = state.difficulty === 'junior' ? 240 : state.difficulty === 'senior' ? 180 : 120;
+    budget = `R$ ${Math.floor(baseBudget + Math.random() * 40)}k Max`;
+  } else if (state.country === 'cn') {
+    const baseBudget = state.difficulty === 'junior' ? 400 : state.difficulty === 'senior' ? 300 : 180;
+    budget = `¥${Math.floor(baseBudget + Math.random() * 50)}k Max`;
+  } else {
+    // US, EU, SG, AU
+    const cur = reg.currency;
+    const baseBudget = state.difficulty === 'junior' ? 180 : state.difficulty === 'senior' ? 130 : 80;
+    budget = `${cur}${Math.floor(baseBudget + Math.random() * 30)}k Max`;
+  }
+
   state.activeRole = {
     title: template.title,
     exp: template.exp,
-    loc: template.loc,
+    loc: location,
     stack: template.stack,
-    budget: template.budget,
-    character: template.character
+    budget: budget,
+    character: managerChar
   };
-  
-  // Adjust budget randomly based on difficulty
-  if (state.difficulty === 'senior') {
-    state.activeRole.budget = `₹${Math.floor(20 + Math.random() * 12)}L Max`;
-  } else if (state.difficulty === 'executive') {
-    state.activeRole.budget = `₹${Math.floor(12 + Math.random() * 8)}L Max`;
-  }
   
   state.roleProgress = 0;
   state.activeCharacter = state.activeRole.character;
@@ -701,7 +970,15 @@ function generateNewRole() {
   // Set Role Status
   const status = document.getElementById("active-role-status");
   status.className = "role-status badge-success";
-  status.innerText = "Sourcing Stage";
+  
+  // Set specific stage text
+  if (state.country === 'in') {
+    status.innerText = "Notice Period Sourcing";
+  } else if (state.country === 'jp') {
+    status.innerText = "Hanko Clearance Stage";
+  } else {
+    status.innerText = "Sourcing Stage";
+  }
 
   // Trigger Sourcing Scenario
   loadScenario(getRandomSourcingScenario());
@@ -711,21 +988,17 @@ function generateNewRole() {
 // 9. Scenario & Choice Handlers
 // ==========================================================================
 function getRandomSourcingScenario() {
-  const index = Math.floor(Math.random() * SOURCING_SCENARIOS.length);
-  return SOURCING_SCENARIOS[index];
+  return drawFromDeck('sourcing', SOURCING_SCENARIOS);
 }
 
 function getNextStageScenario() {
   // progress determines which deck we pick from
   if (state.roleProgress === 1) {
-    const index = Math.floor(Math.random() * CANDIDATE_SCENARIOS.length);
-    return CANDIDATE_SCENARIOS[index];
+    return drawFromDeck('candidate', CANDIDATE_SCENARIOS);
   } else if (state.roleProgress === 2) {
-    const index = Math.floor(Math.random() * FEEDBACK_SCENARIOS.length);
-    return FEEDBACK_SCENARIOS[index];
+    return drawFromDeck('feedback', FEEDBACK_SCENARIOS);
   } else {
-    const index = Math.floor(Math.random() * OFFER_SCENARIOS.length);
-    return OFFER_SCENARIOS[index];
+    return drawFromDeck('offer', OFFER_SCENARIOS);
   }
 }
 
@@ -733,9 +1006,20 @@ function loadScenario(scenario) {
   // Update speaker avatar
   let char = state.activeRole.character;
   if (scenario.speaker === "Candidate") {
-    // Select a candidate character corresponding to role
-    const candidates = [CHARACTERS.PRIYA, CHARACTERS.EUGENE, CHARACTERS.SARAH];
-    char = candidates[Math.floor(Math.random() * candidates.length)];
+    const reg = REGIONS[state.country] || REGIONS.us;
+    const candName = reg.names.candidates[Math.floor(Math.random() * reg.names.candidates.length)];
+    const baseCandidates = [CHARACTERS.PRIYA, CHARACTERS.EUGENE, CHARACTERS.SARAH];
+    const baseCand = baseCandidates[Math.floor(Math.random() * baseCandidates.length)];
+    
+    char = {
+      name: `${candName} (${baseCand.name.split(" (")[1]}`,
+      role: "Candidate",
+      skin: baseCand.skin,
+      hairColor: baseCand.hairColor,
+      hairD: baseCand.hairD,
+      suitColor: baseCand.suitColor,
+      tieColor: baseCand.tieColor
+    };
   }
   
   state.activeCharacter = char;
@@ -889,9 +1173,24 @@ function progressDay() {
 // Chaos Event popup loader
 function triggerChaosEvent() {
   synth.playTension();
-  const event = CHAOS_EVENTS[Math.floor(Math.random() * CHAOS_EVENTS.length)];
   
-  updateAvatar(CHARACTERS.VIKRAM, "STRESSED");
+  const event = drawFromDeck('chaos', CHAOS_EVENTS);
+  
+  // Localize manager character for the chaos alert
+  const reg = REGIONS[state.country] || REGIONS.us;
+  const managerName = reg.names.managers[0];
+  const baseCand = CHARACTERS.VIKRAM;
+  const managerChar = {
+    name: `${managerName} (Primary Manager)`,
+    role: "Hiring Manager",
+    skin: baseCand.skin,
+    hairColor: baseCand.hairColor,
+    hairD: baseCand.hairD,
+    suitColor: baseCand.suitColor,
+    tieColor: baseCand.tieColor
+  };
+  
+  updateAvatar(managerChar, "STRESSED");
   
   document.getElementById("speaker-title").innerText = "COMPANY ALERT";
   document.getElementById("speaker-quote").innerText = `"${event.description}"`;
@@ -923,7 +1222,6 @@ function triggerChaosEvent() {
       progressDay();
       
       if (!checkGameEnd()) {
-        // Resume candidate stages
         loadScenario(getNextStageScenario());
       }
     });
@@ -1180,12 +1478,29 @@ function checkGameEnd() {
 }
 
 function endGame(won, reason = "") {
+  // Calculate final score
+  let score = (state.hiresClosed * 1000) + (state.day * 100);
+  score += Math.floor(state.metrics.sanity * 50);
+  score += Math.floor(state.metrics.happiness * 50);
+  score += Math.floor(state.metrics.candidate * 50);
+  if (won) {
+    score += 5000; // Victory bonus
+  }
+  
+  // Save to leaderboard
+  saveScore(state.playerName, score, state.hiresClosed, state.day);
+  state.lastScore = score;
+
   if (won) {
     synth.playVictory();
     document.getElementById("vic-hires").innerText = `${state.hiresClosed} Hires Placed`;
     document.getElementById("vic-hm").innerText = `${state.metrics.happiness}%`;
     document.getElementById("vic-cx").innerText = `${state.metrics.candidate}%`;
     document.getElementById("vic-sanity").innerText = `${state.metrics.sanity}%`;
+    
+    document.getElementById("victory-score").innerText = score.toLocaleString();
+    renderLeaderboard("victory-leaderboard", state.playerName);
+    
     document.getElementById("modal-victory").classList.remove("hidden");
     startConfetti();
   } else {
@@ -1195,6 +1510,10 @@ function endGame(won, reason = "") {
     document.getElementById("report-hires").innerText = `${state.hiresClosed} / 10 Hires`;
     document.getElementById("report-hm").innerText = `${state.metrics.happiness}%`;
     document.getElementById("report-cx").innerText = `${state.metrics.candidate}%`;
+    
+    document.getElementById("defeat-score").innerText = score.toLocaleString();
+    renderLeaderboard("defeat-leaderboard", state.playerName);
+    
     document.getElementById("modal-gameover").classList.remove("hidden");
   }
 }
@@ -1281,6 +1600,9 @@ function stopConfetti() {
 // 16. Event Listeners Setup
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
+  // Fetch scenarios dynamically from scenarios.json
+  fetchScenarios();
+
   // Sound Mute Toggle
   document.getElementById("mute-btn").addEventListener("click", () => {
     const isMuted = synth.toggleMute();
@@ -1327,10 +1649,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Screen 2 -> Screen 3 Transition
-  document.getElementById("go-to-diff-btn").addEventListener("click", () => {
+  // Screen 2 -> Screen 3 Transition (Go to Country Selection)
+  document.getElementById("go-to-country-btn").addEventListener("click", () => {
     synth.playClack();
     document.getElementById("start-screen-test").classList.add("hidden");
+    document.getElementById("start-screen-country").classList.remove("hidden");
+  });
+
+  // Country Selection Action
+  const countryCards = document.querySelectorAll(".country-card");
+  countryCards.forEach(card => {
+    card.addEventListener("click", () => {
+      countryCards.forEach(c => c.classList.remove("active"));
+      card.classList.add("active");
+      
+      state.country = card.getAttribute("data-country");
+      synth.playClack();
+    });
+  });
+
+  // Screen 3 -> Screen 4 Transition (Go to Difficulty Selection)
+  document.getElementById("go-to-diff-btn").addEventListener("click", () => {
+    synth.playClack();
+    document.getElementById("start-screen-country").classList.add("hidden");
     document.getElementById("start-screen-diff").classList.remove("hidden");
   });
 
@@ -1363,7 +1704,20 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("reality-sticky").classList.remove("open");
   });
   
-  // Game Restart Buttons
+  // Initial leaderboard load
+  renderLeaderboard("start-leaderboard");
+
+  // Game Restart and Leaderboard Submission Buttons
+  document.getElementById("defeat-github-btn").addEventListener("click", () => {
+    synth.playSuccess();
+    submitScoreToGitHub();
+  });
+
+  document.getElementById("victory-github-btn").addEventListener("click", () => {
+    synth.playSuccess();
+    submitScoreToGitHub();
+  });
+
   document.getElementById("restart-game-btn").addEventListener("click", () => {
     stopConfetti();
     document.getElementById("modal-gameover").classList.add("hidden");
@@ -1381,8 +1735,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function resetStartModal() {
     document.getElementById("start-screen-intro").classList.remove("hidden");
     document.getElementById("start-screen-test").classList.add("hidden");
+    document.getElementById("start-screen-country").classList.add("hidden");
     document.getElementById("start-screen-diff").classList.add("hidden");
     document.getElementById("test-feedback-box").classList.add("hidden");
     document.querySelectorAll(".test-choice-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".country-card").forEach(b => b.classList.remove("active"));
+    document.querySelector(".country-card[data-country='us']").classList.add("active");
+    state.country = 'us';
+    
+    // Refresh start screen leaderboard
+    renderLeaderboard("start-leaderboard");
   }
 });

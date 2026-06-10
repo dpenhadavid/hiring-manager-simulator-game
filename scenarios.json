@@ -1,0 +1,5317 @@
+{
+  "sourcing": [
+    {
+      "id": "src_kubernetes_experience",
+      "title": "Unreasonable Tech Age Requirements",
+      "description": "The Hiring Manager demands a Senior Architect with 20 years of experience in Kubernetes. Kubernetes was released in 2014.",
+      "speaker": "Hiring Manager",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Start searching immediately. Time to find a time traveler.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 0,
+            "sanity": -15,
+            "time": -15
+          },
+          "feedback": "The manager is happy you 'can-do'. You, however, start looking for doctors who can manipulate physics."
+        },
+        {
+          "text": "Gently explain that Kubernetes is only 12 years old.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 5,
+            "sanity": 10,
+            "time": -5
+          },
+          "feedback": "The manager sighs, 'I need someone who was thinking about it before it was released.' You negotiate it to 10 years."
+        },
+        {
+          "text": "Suggest Docker/Containers flexibility instead.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 10,
+            "sanity": 5,
+            "time": 5
+          },
+          "feedback": "A compromise! You agree to look for general containerization skills. Sourcing speed improves."
+        },
+        {
+          "text": "Cry quietly into your keyboard.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": -5,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "You spend the afternoon sobbing. Surprisingly, it buys you time as the manager feels awkward and goes to lunch."
+        }
+      ]
+    },
+    {
+      "id": "src_ai_buzzwords",
+      "title": "The Prompt Architect",
+      "description": "A candidate claims to be a 'Senior Prompt Engineering Evangelist' and wants $350k, but their CV has no actual coding experience.",
+      "speaker": "Recruiter Colleague",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Pass them to the AI Team Lead for review.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 15,
+            "sanity": -15,
+            "time": -10
+          },
+          "feedback": "The Team Lead is insulted you sent someone who 'only knows how to chat with a website'. Your sanity takes a hit."
+        },
+        {
+          "text": "Politely reject. We need actual software engineers.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -10,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "A clean reject. The candidate posts a 10-paragraph rant on LinkedIn about how the company hates AI innovators."
+        },
+        {
+          "text": "Ask them to build a simple Python script to test them.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": -15,
+            "sanity": 5,
+            "time": -10
+          },
+          "feedback": "They try to prompt ChatGPT to write the script, but submit it with 'Certainly, here is the script' still in the text."
+        },
+        {
+          "text": "Hire them as a consultant to 'synergize' our team.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 20,
+            "sanity": -25,
+            "time": -15
+          },
+          "feedback": "The CEO loves the AI buzzwords, but the engineering team stops talking to you entirely."
+        }
+      ]
+    },
+    {
+      "id": "src_linkedin_influencer",
+      "title": "LinkedIn Thought Leader",
+      "description": "A candidate with a massive LinkedIn following and 'Open to Work' green banner asks for a fast-tracked interview loop.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Fast-track them to get some free social media publicity.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 25,
+            "sanity": -15,
+            "time": 10
+          },
+          "feedback": "They write a viral post: 'How I got an interview in 5 minutes'. Your inbox is now flooded with 4,000 resumes."
+        },
+        {
+          "text": "Enforce the standard multi-stage process.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -5
+          },
+          "feedback": "They refuse to do the coding test and post: 'Why technical interviews are broken: A 10-part thread.' No one cares."
+        },
+        {
+          "text": "Ask them to write a guest blog post instead of interviewing.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 15,
+            "sanity": 5,
+            "time": 15
+          },
+          "feedback": "They write it, but it's just plagiarized advice from a medium article. Sourcing time is saved, but CEO is unimpressed."
+        },
+        {
+          "text": "Mute their profile and block their messages.",
+          "metrics": {
+            "happiness": 0,
+            "candidate": -25,
+            "sanity": 25,
+            "time": -5
+          },
+          "feedback": "A quiet day! You save your sanity, though they accuse our company of 'toxic gatekeeping' in a video."
+        }
+      ]
+    },
+    {
+      "id": "src_cryptopivot",
+      "title": "Crypto Bro AI Pivot",
+      "description": "A developer whose last five roles were 'Web3 Visionary' wants to join as an AI engineer, claiming 'tokens and weights are basically the same'.",
+      "speaker": "Hiring Manager",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Pass them to the engineering test stage.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 15,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "They try to solve the technical assessment using Solidity and ask when the company is launching its coin."
+        },
+        {
+          "text": "Reject them immediately. Too much blockchain fluff.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -10,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "Manager is relieved. The candidate replies that we are 'missing the paradigm shift' and will go bankrupt."
+        },
+        {
+          "text": "Suggest they apply for a product marketing role instead.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 5,
+            "time": 10
+          },
+          "feedback": "They actually accept the interview for marketing! Sourcing time is saved, and the marketing lead is happy."
+        },
+        {
+          "text": "Ask them about the details of their failed startup.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 5,
+            "sanity": -5,
+            "time": -15
+          },
+          "feedback": "They talk for 2 hours about a decentralized dog-walking app. You lose valuable sourcing hours."
+        }
+      ]
+    },
+    {
+      "id": "src_remote_work",
+      "title": "Yacht Remote Work",
+      "description": "Our star candidate says they will only sign if they can work 100% remotely from a boat in international waters.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Approve it immediately to close the sourcing stage.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": -15,
+            "time": 15
+          },
+          "feedback": "The legal department goes into a state of absolute panic over maritime labor laws and tax residency."
+        },
+        {
+          "text": "Offer standard hybrid work and a free company hoodie.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They decline. 'You cannot cage my spirit or my satellite connection,' they write back."
+        },
+        {
+          "text": "Suggest contracting instead of full-time employment.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 5,
+            "time": 5
+          },
+          "feedback": "They agree to work as a contractor. Finance is happy, and the candidate gets their ocean breeze."
+        },
+        {
+          "text": "Ask if the boat has stable Starlink internet.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 10,
+            "sanity": 0,
+            "time": -10
+          },
+          "feedback": "They send you a 40-page PDF on network latency at sea. You wasted a lot of sourcing time."
+        }
+      ]
+    },
+    {
+      "id": "src_bootcamp_grad",
+      "title": "The Todo App Guru",
+      "description": "A fresh bootcamp grad applies with a resume listing 'Master of React, Node, and Python' but only has a Todo list project on GitHub.",
+      "speaker": "Engineering Lead",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Send them a junior-level take-home test.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "They copy the solution from GitHub. The tech lead is annoyed by the copy-paste code quality."
+        },
+        {
+          "text": "Reject them. We need experienced engineers.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "The candidate is sad, but you save precious time for the engineering team."
+        },
+        {
+          "text": "Offer them an unpaid internship first.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -25,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "They reject and call the company 'exploitative' in a local student forum. Your candidate rating drops."
+        },
+        {
+          "text": "Set up a quick screening call to test their basics.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 10,
+            "sanity": -5,
+            "time": -15
+          },
+          "feedback": "During the call, they struggle to explain what an array is. Sourcing time wasted."
+        }
+      ]
+    },
+    {
+      "id": "src_ex_faang_elite",
+      "title": "Ex-FAANG Snobbery",
+      "description": "A candidate who spent 9 months at Google asks if we have 'free organic sushi' and 'nap pods' in our office.",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Lie and say we are planning to build nap pods next quarter.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 20,
+            "sanity": -15,
+            "time": -5
+          },
+          "feedback": "They agree to interview, but they'll be very disappointed when they see the small kitchen."
+        },
+        {
+          "text": "Tell them we have a coffee machine and a dream.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They scoff and withdraw. The manager is glad you weeded out someone with an entitlement complex."
+        },
+        {
+          "text": "Explain our hybrid flexibility instead.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They are willing to compromise if we let them work remotely. You move them to the pipeline."
+        },
+        {
+          "text": "Ask them if they can write code without Google search.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -20,
+            "sanity": 5,
+            "time": -10
+          },
+          "feedback": "A bit aggressive! The candidate feels insulted, and the manager thinks you lacked professionalism."
+        }
+      ]
+    },
+    {
+      "id": "src_resume_keyword_stuffing",
+      "title": "The Infinite CV",
+      "description": "A resume lands on your desk containing every acronym since 1980, including Cobol, Kubernetes, React, and 'Quantum Blockchain AI'.",
+      "speaker": "Recruiter Colleague",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Ask them to explain their experience in detail.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 15,
+            "sanity": -20,
+            "time": -15
+          },
+          "feedback": "They reply with a massive, copy-pasted wall of text. Reading it ruins your day and your sanity."
+        },
+        {
+          "text": "Filter out the noise and reject. Clearly keyword stuffed.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -10,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "Clean decision. You save the team's engineering hours from being wasted on a charlatan."
+        },
+        {
+          "text": "Ask for a technical screening with a senior engineer.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 5,
+            "sanity": -10,
+            "time": -5
+          },
+          "feedback": "The senior engineer is annoyed because the candidate didn't know basic Git operations."
+        },
+        {
+          "text": "Tell them to pick their top 3 skills and resubmit.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They resubmit a clean, realistic resume. The process actually works."
+        }
+      ]
+    },
+    {
+      "id": "src_competitive_gamer",
+      "title": "The Dota 2 Sourcing Strategy",
+      "description": "The Hiring Manager wants you to source candidates by looking at the top 100 players in competitive Dota 2, claiming 'high APM equals fast coding'.",
+      "speaker": "Hiring Manager",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Spend your afternoon messaging players on Steam.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": -10,
+            "sanity": -25,
+            "time": -20
+          },
+          "feedback": "You get blocked by 90% of them. Sourcing sanity drops to zero, but the manager is happy you tried."
+        },
+        {
+          "text": "Explain that game APM does not translate to system design.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 10,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "The manager complains that you lack 'out of the box thinking', but you save valuable sourcing hours."
+        },
+        {
+          "text": "Compromise and look for candidates on GitHub with gaming side projects.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "You find a great candidate who built a game matchmaking bot. Sourcing is successful!"
+        },
+        {
+          "text": "Challenge the manager to a 1v1 game to decide the strategy.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 0,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "You lose the match in 10 minutes. You must now source from the Dota forums. Time wasted."
+        }
+      ]
+    },
+    {
+      "id": "src_boomerang_dev",
+      "title": "The Boomerang Dev",
+      "description": "A developer who quit our company last month wants to return, but demands a 50% salary bump to do the exact same job.",
+      "speaker": "HR Director",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Approve the return. They already know the codebase.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 15,
+            "sanity": -15,
+            "time": 25
+          },
+          "feedback": "The manager is thrilled they don't have to train someone, but HR is upset about internal equity."
+        },
+        {
+          "text": "Reject them. We cannot reward people for quitting.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -10,
+            "sanity": 15,
+            "time": -15
+          },
+          "feedback": "They go to a competitor. You now have to source a new candidate from scratch."
+        },
+        {
+          "text": "Offer a 20% raise instead and some equity options.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "They accept! You balanced the budget and closed the role quickly."
+        },
+        {
+          "text": "Ask them why they left in the first place.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 5,
+            "sanity": 0,
+            "time": -10
+          },
+          "feedback": "They spend an hour complaining about the office coffee. Sourcing progress slows down."
+        }
+      ]
+    },
+    {
+      "id": "src_certifications_galore",
+      "title": "The Certificate Collector",
+      "description": "A candidate's resume has 15 different Scrum Master, AWS Cloud Practitioner, and ITIL certifications, but no project history.",
+      "speaker": "Engineering Lead",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Set them up for a technical interview round.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 15,
+            "sanity": -15,
+            "time": -15
+          },
+          "feedback": "They fail the basic coding test. The interviewer is angry at you for wasting their afternoon."
+        },
+        {
+          "text": "Reject them. Certifications are not a substitute for coding.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -10,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "A clean filter. You save time and focus on candidates who actually build applications."
+        },
+        {
+          "text": "Recommend them for a Project Manager role instead.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They are delighted! Sourcing is done and you helped fill a PM role simultaneously."
+        },
+        {
+          "text": "Ask them to explain their favorite certification.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 5,
+            "sanity": -5,
+            "time": -10
+          },
+          "feedback": "They send you a 2,000-word essay about agile frameworks. Sourcing time wasted."
+        }
+      ]
+    },
+    {
+      "id": "src_overemployment",
+      "title": "Three Jobs, One Dev",
+      "description": "You suspect a candidate is overemployed because their LinkedIn profile has 'Currently Employed' at three different startups simultaneously.",
+      "speaker": "Recruiter Colleague",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Ignore it. If they can code, who cares?",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": -15,
+            "time": 10
+          },
+          "feedback": "They join, but they are constantly absent from meetings. The manager is furious with you."
+        },
+        {
+          "text": "Ask them directly about the overlapping timelines during sourcing.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -20,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They get defensive and withdraw. You saved the company from a chaotic hire."
+        },
+        {
+          "text": "Check references at all three current employers.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "You find out they are indeed collecting three paychecks. Candidate is blacklisted."
+        },
+        {
+          "text": "Offer them a part-time contract instead.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "A great compromise. They agree to write code hourly, saving budget and sourcing time."
+        }
+      ]
+    },
+    {
+      "id": "src_underage_prodigy",
+      "title": "The 15-Year-Old Genius",
+      "description": "You source an amazing candidate who built a custom database engine, but you discover they are only 15 years old.",
+      "speaker": "HR Director",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Hire them immediately as a full-time employee.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 25,
+            "sanity": -35,
+            "time": 10
+          },
+          "feedback": "The legal department goes nuclear over child labor violations. You are given a final warning."
+        },
+        {
+          "text": "Reject them with a nice message wishing them luck.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -15,
+            "sanity": 15,
+            "time": -15
+          },
+          "feedback": "The manager is upset you let a 'genius' go. You restart the search for an adult."
+        },
+        {
+          "text": "Offer them a summer high-school internship.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "A legal, happy solution. The candidate is excited and the manager gets help for cheap."
+        },
+        {
+          "text": "Ask their parents to sign a freelance agreement.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": -10,
+            "time": 5
+          },
+          "feedback": "You get the code, but coordinating with their mother about tax returns is a headache."
+        }
+      ]
+    },
+    {
+      "id": "src_stealth_startup",
+      "title": "The Stealth CTO",
+      "description": "A candidate lists 'CTO at Stealth Startup' since 2023, but you suspect they are just unemployed and doing side projects.",
+      "speaker": "Hiring Manager",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Treat them like a senior dev and interview them.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 15,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "They do well in the coding test but demand a 'VP level' salary we can't afford."
+        },
+        {
+          "text": "Politely decline. We need someone with corporate experience.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "You save time. Candidate sends a snarky reply about how we 'don't understand innovation'."
+        },
+        {
+          "text": "Ask them to explain their startup product.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 10,
+            "sanity": -5,
+            "time": -15
+          },
+          "feedback": "They spend an hour explaining a blockchain-based shoe store. Sourcing time wasted."
+        },
+        {
+          "text": "Offer them a standard mid-level developer interview loop.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -10,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "They swallow their pride and agree. You've sourced a solid engineer at a normal salary."
+        }
+      ]
+    },
+    {
+      "id": "src_open_to_work",
+      "title": "The Green Banner Debate",
+      "description": "The Hiring Manager refuses to interview anyone with the green '#OpenToWork' banner on LinkedIn, calling it 'a sign of desperation'.",
+      "speaker": "Hiring Manager",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Comply. Filter out all green banners.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": -25,
+            "sanity": -10,
+            "time": -20
+          },
+          "feedback": "You miss out on 70% of the active candidate pool. Sourcing speed crawls to a halt."
+        },
+        {
+          "text": "Explain that the banner is a standard job-seeking tool.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 10,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "Manager rolls their eyes but lets you present a few banner-carrying candidates."
+        },
+        {
+          "text": "Photoshopping the banner off their profile pictures before sharing.",
+          "metrics": {
+            "happiness": 25,
+            "candidate": 20,
+            "sanity": -30,
+            "time": -15
+          },
+          "feedback": "It works! They get hired. But your sanity is ruined from spending hours in MS Paint."
+        },
+        {
+          "text": "Focus only on 'passive' candidates who are currently employed.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -10,
+            "sanity": 5,
+            "time": -10
+          },
+          "feedback": "Sourcing is slower, but manager is happy with the 'exclusive' feel of the pipeline."
+        }
+      ]
+    },
+    {
+      "id": "src_hacker_news",
+      "title": "Hacker News Elitism",
+      "description": "The CEO wants you to post our job ad on Hacker News and hire whoever has the highest comment karma.",
+      "speaker": "CEO",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Post the job and start checking comment scores.",
+          "metrics": {
+            "happiness": 25,
+            "candidate": -10,
+            "sanity": -25,
+            "time": -20
+          },
+          "feedback": "You find a candidate with 50k karma. They spend the interview arguing about database index implementation. Sanity zero."
+        },
+        {
+          "text": "Push back. Karma is not a metric for team collaboration.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 10,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "CEO is disappointed you aren't 'developer-native'. But you stick to standard sourcing."
+        },
+        {
+          "text": "Post the job but use our standard application filter.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "You get great applicants and filter out the toxic trolls. Sourcing is successful!"
+        },
+        {
+          "text": "Tell the CEO he should handle the Hacker News thread.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 5,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "CEO gets into a flame war in the comments section and forgets about hiring for a week."
+        }
+      ]
+    },
+    {
+      "id": "src_phd_category_theory",
+      "title": "The Theoretical Math Wizard",
+      "description": "A PhD in Category Theory applies for a frontend web developer role. They refuse to write CSS, calling it 'not mathematically rigorous'.",
+      "speaker": "Engineering Lead",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Hire them to write our database logic instead.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 20,
+            "sanity": -15,
+            "time": 15
+          },
+          "feedback": "They write beautiful, abstract database queries. The frontend lead is happy they don't have to talk to them."
+        },
+        {
+          "text": "Reject them. A frontend developer must write frontend code.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "Clean reject. The candidate sends a math formula proving our recruitment pipeline is inefficient."
+        },
+        {
+          "text": "Ask them to learn CSS over the weekend.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -20,
+            "sanity": 5,
+            "time": -10
+          },
+          "feedback": "They refuse. 'CSS is an insult to Turing completeness,' they write back. Sourcing time wasted."
+        },
+        {
+          "text": "Suggest they apply to a research institution.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "You help them find a better fit. Sourcing time saved and candidate is grateful."
+        }
+      ]
+    },
+    {
+      "id": "src_pdf_columns",
+      "title": "The Sourcing Parser Failure",
+      "description": "Your ATS parsing software breaks on a candidate's three-column, emoji-heavy resume, converting their name into 'JavaScript Developer 🔥'.",
+      "speaker": "Recruiter Colleague",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Manually copy-paste their details into the system.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": -25,
+            "time": -15
+          },
+          "feedback": "It takes 40 minutes of your life. Sourcing time is wasted, but the candidate is in the pipeline."
+        },
+        {
+          "text": "Reject the candidate because of bad CV formatting.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": -25,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "You save time, but miss out on a potentially great dev who just wanted to look trendy."
+        },
+        {
+          "text": "Ask the candidate to submit a plain text resume.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 5,
+            "sanity": 10,
+            "time": -5
+          },
+          "feedback": "They resubmit a simple Word document. The parser works and your sanity is saved."
+        },
+        {
+          "text": "Just rename them 'Candidate A' and send it to the manager.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -10,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "Manager is confused why we are hiring a secret agent. Sourcing slows down."
+        }
+      ]
+    },
+    {
+      "id": "src_cold_outreach",
+      "title": "AI Outreach Fail",
+      "description": "Your automated sourcing tool sends an email saying: 'Hello {First_Name}! We loved your work at {Company_Name}!', and the candidate calls you out on LinkedIn.",
+      "speaker": "Candidate",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Apologize publicly on their LinkedIn thread.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 15,
+            "sanity": -20,
+            "time": -10
+          },
+          "feedback": "Your public apology defuses the drama, but the company's brand image takes a small hit."
+        },
+        {
+          "text": "Ignore the post and block the candidate.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -30,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "The post goes semi-viral. Other candidates mock your company. Recruiter sanity saved, but pipeline is damaged."
+        },
+        {
+          "text": "Blame the intern in a humorous reply.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -10,
+            "sanity": 5,
+            "time": 10
+          },
+          "feedback": "The internet loves the joke. The drama dies down. Sourcing is back on track."
+        },
+        {
+          "text": "Send a personalized apology email and offer a gift card.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 25,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "The candidate appreciates the gesture, deletes the post, and actually agrees to interview!"
+        }
+      ]
+    },
+    {
+      "id": "src_former_founder",
+      "title": "The Failed Founder",
+      "description": "A candidate who was the CEO of a failed startup applies as a senior developer. Sourcing them might be tricky as they 'like to run things'.",
+      "speaker": "Engineering Lead",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Interview them for the dev role. They have great broad skills.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": -15,
+            "time": -10
+          },
+          "feedback": "They keep giving feedback on the company's business model during coding tests. Dev lead is annoyed."
+        },
+        {
+          "text": "Reject them. We need a team player, not a boss.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "You avoid potential authority struggles in the team. Sourcing pipeline resets."
+        },
+        {
+          "text": "Suggest them to the VP of Product for a Product Manager role.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "A perfect match! Sourcing is successfully completed, and the CEO is impressed."
+        },
+        {
+          "text": "Ask them to present their startup's post-mortem.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 5,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "They spend two hours explaining why their VCs betrayed them. Time completely wasted."
+        }
+      ]
+    },
+    {
+      "id": "src_glassdoor_reviews",
+      "title": "The Glassdoor Detective",
+      "description": "A candidate replies to your sourcing email: 'I saw your Glassdoor rating is 1.8. Why is employee turnover so high?'",
+      "speaker": "Candidate",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Be honest. Tell them we had a bad manager who was fired.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "The candidate respects the honesty and agrees to talk. Manager is annoyed you blamed management."
+        },
+        {
+          "text": "Say the reviews are fake and left by competitors.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 5,
+            "time": -10
+          },
+          "feedback": "The candidate ghosted you immediately. Clearly didn't believe the corporate spin."
+        },
+        {
+          "text": "Focus on the positive reviews and benefits.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": 5,
+            "time": 10
+          },
+          "feedback": "You sell the hybrid benefits. Candidate agrees to enter the pipeline. Sourcing closed."
+        },
+        {
+          "text": "Delete your email and pretend you never saw it.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": -10,
+            "sanity": 20,
+            "time": -15
+          },
+          "feedback": "You avoid the awkwardness. Sourcing time lost, but sanity intact."
+        }
+      ]
+    },
+    {
+      "id": "src_996_culture",
+      "title": "Weekend Warriors",
+      "description": "The Hiring Manager wants you to include 'Must love working weekends' in the job description to screen for 'true passion'.",
+      "speaker": "Hiring Manager",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Add it. The manager knows what they want.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": -35,
+            "sanity": -10,
+            "time": -20
+          },
+          "feedback": "We get zero applicants for two weeks. Sourcing timeline is in critical danger."
+        },
+        {
+          "text": "Refuse. That requirement will ruin candidate flow.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "Manager complains you don't support company growth, but applicant numbers remain healthy."
+        },
+        {
+          "text": "Rephrase it to 'Occasional deployment support required'.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "Excellent corporate speak. Sourcing is successful and manager gets their weekend coverage."
+        },
+        {
+          "text": "Suggest paying 1.5x salary for weekend hours.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 5,
+            "time": -5
+          },
+          "feedback": "Finance rejects the budget expansion, but candidates love the idea. Sourcing delayed."
+        }
+      ]
+    },
+    {
+      "id": "src_demands_crypto",
+      "title": "The Crypto Salary Demand",
+      "description": "A candidate says they will only interview if we pay them entirely in Bitcoin or Ethereum, citing 'unstable fiat currency'.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Agree and write a custom contract.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 25,
+            "sanity": -25,
+            "time": 10
+          },
+          "feedback": "HR and accounting teams are crying over tax compliance and wallet security. Sourcing closed but chaos ensues."
+        },
+        {
+          "text": "Explain that company policy only allows bank transfers.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They decline and call you a 'fiat wage slave'. Sourcing pipeline resets."
+        },
+        {
+          "text": "Offer a signing bonus in crypto instead.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 15,
+            "sanity": 5,
+            "time": 5
+          },
+          "feedback": "Accounting approves a one-time crypto purchase. Candidate enters the loop."
+        },
+        {
+          "text": "Suggest they convert their salary themselves using a broker.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They realize they can do that. Candidate is sourced, saving recruiter sanity."
+        }
+      ]
+    },
+    {
+      "id": "src_bulk_application",
+      "title": "The Multi-Applicant",
+      "description": "A candidate uses an automation script to apply to all 47 open roles at our company, from Frontend Dev to Head of HR.",
+      "speaker": "Recruiter Colleague",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Review their CV to find the best match.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": -25,
+            "time": -15
+          },
+          "feedback": "You find they are actually qualified for a backend role, but your morning is gone. Sourcing time lost."
+        },
+        {
+          "text": "Reject all 47 applications at once.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 20,
+            "time": 10
+          },
+          "feedback": "A satisfying click. You save time, though the candidate leaves a bad review on Glassdoor."
+        },
+        {
+          "text": "Ask them to choose one role and reapply.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They pick the backend role. Sourcing proceeds normally."
+        },
+        {
+          "text": "Block their IP from the application portal.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": -30,
+            "sanity": 15,
+            "time": -5
+          },
+          "feedback": "You block them, but the IT department complains about recruiters managing network policies."
+        }
+      ]
+    },
+    {
+      "id": "src_agile_evangelist",
+      "title": "The Scrum Master Overlord",
+      "description": "A certified Agile Scrum Coach applies. They say their goal is to replace coding hours with three additional daily syncs.",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Fast-track them. We need process improvement.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 20,
+            "sanity": -20,
+            "time": -15
+          },
+          "feedback": "They introduce 'Fibonacci planning poker'. The developers stop writing code. Sanity drops."
+        },
+        {
+          "text": "Reject them. Our engineers need to write code.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "The developers buy you a coffee to show their gratitude. Sourcing is successful!"
+        },
+        {
+          "text": "Set up an interview with the project team.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 10,
+            "sanity": -5,
+            "time": -10
+          },
+          "feedback": "The interview is just a 2-hour debate on Jira configurations. Time wasted."
+        },
+        {
+          "text": "Ask them to explain their metrics of developer velocity.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 5,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They fail to explain how meetings equal progress. They withdraw voluntarily."
+        }
+      ]
+    }
+  ],
+  "candidate": [
+    {
+      "id": "cand_noisy_coffee",
+      "title": "The Coffee Shop Interview",
+      "description": "A candidate joins the video interview from a crowded coffee shop. A barista is steaming milk and a dog is barking loudly.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Push through the noise and continue the interview.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": -25,
+            "time": 10
+          },
+          "feedback": "You can only hear every third word. The interviewer's sanity is destroyed, but the candidate feels accommodated."
+        },
+        {
+          "text": "Politely ask them to reschedule to a quieter time.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -10,
+            "sanity": 15,
+            "time": -15
+          },
+          "feedback": "They agree but are slightly embarrassed. Sourcing time increases, but sanity is preserved."
+        },
+        {
+          "text": "Ask them to write their answers in the Zoom chat.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 10,
+            "sanity": -5,
+            "time": -10
+          },
+          "feedback": "The interview turns into a slow typing contest. Sourcing time lost."
+        },
+        {
+          "text": "Mute their microphone when they are not speaking.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "Saves your ears! They get slightly annoyed at the constant muting, but the loop is completed."
+        }
+      ]
+    },
+    {
+      "id": "cand_chatgpt_live",
+      "title": "AI Assisted Interviewing",
+      "description": "During the live coding challenge, you hear the robotic voice of a screen reader and the candidate's eyes are moving suspiciously.",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Accuse them of cheating and end the call.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -30,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They leave a furious Glassdoor review claiming discrimination. The manager is glad we caught them."
+        },
+        {
+          "text": "Ask them to explain their code logic in detail.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They fail to explain why they used a complex helper library. They withdraw silently."
+        },
+        {
+          "text": "Change the question to a custom verbal logic puzzle.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They fail completely. The team is happy with the filter, and candidate leaves quietly."
+        },
+        {
+          "text": "Ignore it. Everyone uses AI at work anyway.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 25,
+            "sanity": -15,
+            "time": 15
+          },
+          "feedback": "They pass, but on day one they can't write a hello world. The manager is furious with you."
+        }
+      ]
+    },
+    {
+      "id": "cand_takehome_rejection",
+      "title": "The Take-Home Rejection",
+      "description": "Our star candidate refuses our take-home coding test, calling it 'unpaid labor' and asking us to review their public GitHub instead.",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Insist on the take-home. Rules are rules.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -30,
+            "sanity": 15,
+            "time": -15
+          },
+          "feedback": "The candidate drops out. Sourcing resets. Manager complains about losing talent."
+        },
+        {
+          "text": "Approve the GitHub review instead.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 20
+          },
+          "feedback": "The engineering lead is annoyed they have to read undocumented code, but candidate is happy."
+        },
+        {
+          "text": "Offer a $100 stipend for completing the test.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "Finance complains about the expense, but candidate completes the test and passes."
+        },
+        {
+          "text": "Suggest a 1-hour live pairing session instead.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "Everyone agrees! Sourcing speed increases and the assessment is fair."
+        }
+      ]
+    },
+    {
+      "id": "cand_bring_parent",
+      "title": "Interviewing with Mom",
+      "description": "A junior developer candidate joins the Zoom interview. Sitting next to them is their mother, who says she is there 'to assist'.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Allow the mother to stay and watch.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 20,
+            "sanity": -30,
+            "time": -10
+          },
+          "feedback": "The mother keeps interrupting to list her child's awards. Your sanity is destroyed."
+        },
+        {
+          "text": "Politely ask the mother to leave the room.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -20,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "The candidate is very embarrassed and stays quiet the rest of the interview."
+        },
+        {
+          "text": "End the interview immediately.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -35,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "You save time. Candidate's mom writes a letter to your CEO complaining about recruiter rudeness."
+        },
+        {
+          "text": "Address all technical questions to the candidate only.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "You manage the meeting well. The candidate answers the questions, and the mom stays quiet."
+        }
+      ]
+    },
+    {
+      "id": "cand_niche_lang",
+      "title": "Esoteric Programming Languages",
+      "description": "During the coding test, the candidate asks: 'Can I write my solution in Haskell? I find Python too imperative.'",
+      "speaker": "Engineering Lead",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Let them use Haskell.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 25,
+            "sanity": -20,
+            "time": -15
+          },
+          "feedback": "They write a brilliant 3-line solution. No one on our team can read it to grade it. Sanity drops."
+        },
+        {
+          "text": "Insist they use Python or JavaScript.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They struggle with the syntax but complete the task. The team can easily grade it."
+        },
+        {
+          "text": "Ask them to explain their code line-by-line.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 15,
+            "sanity": 5,
+            "time": -15
+          },
+          "feedback": "They spend 45 minutes explaining category theory. You lose sourcing time."
+        },
+        {
+          "text": "Suggest they rewrite it in pseudocode.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "A great compromise! Easy to grade, and candidate feels respected."
+        }
+      ]
+    },
+    {
+      "id": "cand_second_monitor",
+      "title": "The Second Screen Eye Tracker",
+      "description": "You notice the candidate is constantly looking to the right and reading text. You hear keyboard clicks but their hands are on their lap.",
+      "speaker": "Recruiter Colleague",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Ask them to share their entire screen.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They panic, make an excuse about system permissions, and exit the call. Loop closed."
+        },
+        {
+          "text": "Ignore it and let them finish.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 20,
+            "sanity": -15,
+            "time": 10
+          },
+          "feedback": "They pass the interview, but fail the background check. Sourcing time is wasted."
+        },
+        {
+          "text": "Ask them to type live on a shared notepad.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -15,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They slow down significantly, but you confirm they are typing their own code. Recruiter gets clarity."
+        },
+        {
+          "text": "Ask a question about their current screen layout.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": -10,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They blush and admit they had notes open. The interview proceeds honestly."
+        }
+      ]
+    },
+    {
+      "id": "cand_condescending_ask",
+      "title": "The Tables Have Turned",
+      "description": "The candidate looks at the Team Lead and asks: 'What makes you think this company is worth my time?'",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Pitch the company's hyper-growth and culture.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 20,
+            "sanity": -15,
+            "time": -10
+          },
+          "feedback": "You talk for 15 minutes. Candidate nods sceptically. You saved the candidate's interest, but lost time."
+        },
+        {
+          "text": "Turn the question back on them.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "The candidate is taken aback. The Team Lead is impressed by your negotiation skills."
+        },
+        {
+          "text": "End the interview early. Too arrogant.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": -35,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "A quick exit. Sourcing resets, but you protected your team's dignity."
+        },
+        {
+          "text": "Offer to follow up with a detailed pitch document.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 15,
+            "sanity": 10,
+            "time": -15
+          },
+          "feedback": "You spend the night writing a pitch. Sourcing time lost, but candidate remains in loop."
+        }
+      ]
+    },
+    {
+      "id": "cand_complain_stack",
+      "title": "Architecture Critic",
+      "description": "The candidate spends the system design interview explaining why our current backend architecture is 'a pile of legacy garbage'.",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Defend the architecture and argue back.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -25,
+            "sanity": -20,
+            "time": -10
+          },
+          "feedback": "The interview turns into a shouting match about database indexing. Everyone is unhappy."
+        },
+        {
+          "text": "Listen to their critiques and take notes.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 25,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "The candidate has great points! The engineering lead agrees they are a genius who can fix the system."
+        },
+        {
+          "text": "Redirect them to the coding exercise.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -10,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "You keep the interview on track. The candidate completes the task and their critique is logged."
+        },
+        {
+          "text": "Ask them to sketch their proposed rewrite.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They draw a beautiful system layout. Sourcing timeline delayed, but candidate quality is high."
+        }
+      ]
+    },
+    {
+      "id": "cand_no_camera",
+      "title": "The Invisible Candidate",
+      "description": "A candidate refuses to turn on their video camera during the interview, citing 'security concerns and bandwidth issues'.",
+      "speaker": "Hiring Manager",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Insist they turn on the camera for identity verification.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They refuse and withdraw. Sourcing resets. Manager is glad you avoided a potential scammer."
+        },
+        {
+          "text": "Allow the voice-only interview.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": -15,
+            "time": 10
+          },
+          "feedback": "The manager is suspicious the entire time. They suspect the candidate is reading answers."
+        },
+        {
+          "text": "Schedule a short live identity check before the loop.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They turn on camera for 1 minute to show ID, then turn it off. Everyone is satisfied."
+        },
+        {
+          "text": "Ask them to upload a video introduction instead.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": -15,
+            "sanity": 5,
+            "time": -15
+          },
+          "feedback": "They refuse. 'I do not upload biometric data to corporate portals,' they reply."
+        }
+      ]
+    },
+    {
+      "id": "cand_sleeping",
+      "title": "The System Design Nap",
+      "description": "During a long system design interview, the candidate goes quiet. You look at the camera and notice their eyes are closed and they are snoring.",
+      "speaker": "Recruiter Colleague",
+      "mood": "SAD",
+      "choices": [
+        {
+          "text": "Scream 'Fire!' to wake them up.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -30,
+            "sanity": -25,
+            "time": 10
+          },
+          "feedback": "They jump up, spill their coffee, and disconnect. The interview is ruined."
+        },
+        {
+          "text": "Cough loudly into your microphone.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They wake up, apologize, and claim they had a medical reaction. The interview continues."
+        },
+        {
+          "text": "Wait silently until the meeting time ends.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -10,
+            "sanity": -10,
+            "time": -20
+          },
+          "feedback": "You sit in silence for 20 minutes. Sourcing time wasted and manager is annoyed."
+        },
+        {
+          "text": "End the call and email them to reschedule.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 10,
+            "time": -15
+          },
+          "feedback": "They reply apologizing for their fatigue. Sourcing delayed, but candidate remains in loop."
+        }
+      ]
+    },
+    {
+      "id": "cand_emotional_support",
+      "title": "Emotional Support Reptiles",
+      "description": "The candidate wants to know if the office is pet-friendly, as they require their emotional support iguana to sit on their shoulder while coding.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Say yes, the office loves animals.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 25,
+            "sanity": -20,
+            "time": 10
+          },
+          "feedback": "The HR Director is furious about potential safety issues and terrarium space requirements."
+        },
+        {
+          "text": "Say no. Only official service dogs are allowed.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "The candidate declines the role, stating the company culture is 'cold and non-inclusive'."
+        },
+        {
+          "text": "Suggest they work 100% remotely with their pet.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "A perfect solution! The candidate is happy and the office stays reptile-free."
+        },
+        {
+          "text": "Ask to see the iguana on the camera.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 10,
+            "sanity": -5,
+            "time": -10
+          },
+          "feedback": "They show you the lizard. It wears a tiny sweater. You lose time but gain joy."
+        }
+      ]
+    },
+    {
+      "id": "cand_crying_baby",
+      "title": "The Background Circus",
+      "description": "A candidate is doing a technical presentation while their toddler is drawing on the walls behind them and their cat is sitting on their head.",
+      "speaker": "Engineering Lead",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Politely ignore it and focus on the presentation.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 25,
+            "sanity": -10,
+            "time": 10
+          },
+          "feedback": "The presentation is actually excellent. The candidate is hired. Your sanity took a small hit."
+        },
+        {
+          "text": "Offer to reschedule so they can manage their family.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": 15,
+            "time": -15
+          },
+          "feedback": "They thank you for the empathy and reschedule. Sourcing time increases."
+        },
+        {
+          "text": "Tell them to put their child in another room.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -35,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "The candidate feels judged and withdraws. You are labeled 'unfriendly to parents'."
+        },
+        {
+          "text": "Compliment their cat to break the tension.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 20,
+            "sanity": 10,
+            "time": -5
+          },
+          "feedback": "The candidate relaxes. The presentation finishes successfully."
+        }
+      ]
+    },
+    {
+      "id": "cand_fizzbuzz_tears",
+      "title": "FizzBuzz Meltdown",
+      "description": "A candidate with 10 years of experience starts sobbing when you ask them to write a simple FizzBuzz program.",
+      "speaker": "Recruiter Colleague",
+      "mood": "SAD",
+      "choices": [
+        {
+          "text": "Comfort them and help them write the code.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": -25,
+            "time": -15
+          },
+          "feedback": "You spend an hour coaching them. Sourcing time lost, and manager complains they aren't senior."
+        },
+        {
+          "text": "End the interview. A senior developer must know FizzBuzz.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -30,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "A hard decision. You save time, but the candidate leaves crying. Recruiter feels bad."
+        },
+        {
+          "text": "Ask them to explain the algorithm verbally instead.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 15,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They explain it easily. They just had syntax anxiety. Sourcing delayed, candidate saved."
+        },
+        {
+          "text": "Give them a different, non-coding logic puzzle.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 10,
+            "sanity": 5,
+            "time": -15
+          },
+          "feedback": "They solve the puzzle, but the engineering team still wants to see actual code. Sourcing slows down."
+        }
+      ]
+    },
+    {
+      "id": "cand_sell_startup",
+      "title": "The SaaS Pitch",
+      "description": "A candidate spends the technical interview trying to convince you to invest in their new AI startup instead of hiring them.",
+      "speaker": "Hiring Manager",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Listen to the pitch. It might be a good idea.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": -20,
+            "time": -20
+          },
+          "feedback": "You waste an hour on a pitch. Sourcing time lost and manager is annoyed you allowed it."
+        },
+        {
+          "text": "Politely redirect them to the interview coding question.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They refuse to code and withdraw. You save time and close the pipeline."
+        },
+        {
+          "text": "Tell the CEO about the startup idea.",
+          "metrics": {
+            "happiness": 25,
+            "candidate": 15,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "CEO is excited and wants to buy the startup. Recruiter gets a bonus but no hire is made."
+        },
+        {
+          "text": "Ask them if they would build that startup inside our company.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "They agree! Sourcing successfully completed for an 'intrapreneurial' project."
+        }
+      ]
+    },
+    {
+      "id": "cand_overemployed_slip",
+      "title": "The Dual Meeting slip",
+      "description": "Mid-interview, the candidate unmutes and says: 'Yeah, I just finished the deployment on the other server,' clearly talking to another company.",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Confront them about the other job immediately.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -30,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They disconnect in panic. Sourcing loop closed. Recruiter saved time."
+        },
+        {
+          "text": "Ignore the comment and check their background references.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 10,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "You find they are working two jobs. Sourcing slows down as you investigate."
+        },
+        {
+          "text": "Ask them about their time management skills.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They admit they are consulting. They agree to transition to full-time for us."
+        },
+        {
+          "text": "Suggest they sign a strict non-compete clause.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": -20,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "They decline and drop out. You protect the company's IP, but have to restart."
+        }
+      ]
+    },
+    {
+      "id": "cand_greatest_weakness",
+      "title": "Perfectionist Clichés",
+      "description": "When asked about their greatest weakness, the candidate says: 'I work too hard and sometimes care too much about high quality.'",
+      "speaker": "Hiring Manager",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Ask them for a real weakness instead.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They admitting they struggle with public speaking. You get a genuine answer."
+        },
+        {
+          "text": "Accept the answer. Sounds like a dedicated employee.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 15,
+            "sanity": -10,
+            "time": -10
+          },
+          "feedback": "The candidate has high expectations. On the team, they slow down tasks because of perfectionism."
+        },
+        {
+          "text": "Laugh out loud and write down 'No real answer'.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -30,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "Candidate is offended. Loop closed. Recruiter saved time but lost candidate."
+        },
+        {
+          "text": "Ask them how they prevent burnout.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "A great follow-up. They talk about their hobbies, showing they are balanced."
+        }
+      ]
+    },
+    {
+      "id": "cand_carbon_footprint",
+      "title": "Green Web Architecture",
+      "description": "The candidate asks: 'How does your Kubernetes cluster offset its carbon footprint, and do you use green electricity for your offices?'",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Tell them the office is 100% carbon neutral.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 10,
+            "time": -5
+          },
+          "feedback": "They ask for proof documents. You spend hours searching for office energy certs."
+        },
+        {
+          "text": "Say we focus on tech velocity, not environmental metrics.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -30,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They withdraw. 'Our values do not align,' they email. Sourcing resets."
+        },
+        {
+          "text": "Explain that AWS handles the datacenter energy offset.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "A solid corporate answer. Candidate is satisfied and stays in loop."
+        },
+        {
+          "text": "Offer to buy carbon offsets on their behalf.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 20,
+            "sanity": -10,
+            "time": 5
+          },
+          "feedback": "Finance blocks the cost, causing delays in negotiation."
+        }
+      ]
+    },
+    {
+      "id": "cand_vim_vs_emacs",
+      "title": "The Editor Holy War",
+      "description": "The candidate starts a 20-minute debate with the Team Lead about why using IDEs makes developers lazy, and why they only use Vim.",
+      "speaker": "Engineering Lead",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Interrupt and ask them to write code in our notepad tool.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They complain that the browser editor lacks vim keybindings but complete the test."
+        },
+        {
+          "text": "Let the Team Lead debate them.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 20,
+            "sanity": -25,
+            "time": -20
+          },
+          "feedback": "They spend the entire interview arguing. Sourcing time lost, and lead is exhausted."
+        },
+        {
+          "text": "Tell them we have a mandatory VS Code policy.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -30,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They withdraw. 'I will not be subjected to telemetry editors,' they state."
+        },
+        {
+          "text": "Say we focus on results, not the editor.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "A great diplomatic answer. The debate ends and candidate writes their code."
+        }
+      ]
+    },
+    {
+      "id": "cand_fast_learner",
+      "title": "The Fast Learner",
+      "description": "A candidate admits: 'I have never coded in Java, but I have a high IQ and can learn the language by next week.'",
+      "speaker": "Hiring Manager",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Give them a week and schedule a Java coding test.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": -15,
+            "time": -20
+          },
+          "feedback": "They struggle on the test. Sourcing timeline delayed and team time wasted."
+        },
+        {
+          "text": "Reject them. We need someone who knows the stack.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "Clean decision. You focus on candidates who actually have Java experience."
+        },
+        {
+          "text": "Interview them for a junior role instead.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They accept and do well! You saved the talent and filled a junior pipeline."
+        },
+        {
+          "text": "Ask them to solve the test in Python instead.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 15,
+            "sanity": 5,
+            "time": -10
+          },
+          "feedback": "They write clean Python. The manager is willing to train them in Java."
+        }
+      ]
+    },
+    {
+      "id": "cand_streamer",
+      "title": "The Twitch Interviewer",
+      "description": "A developer candidate joins the interview and tells you: 'I am live-streaming this interview to 5,000 developers on Twitch. Say hello!'",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Tell them to shut off the stream or end the interview.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -35,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They turn it off but are grumpy. The stream viewers spam your LinkedIn with angry comments."
+        },
+        {
+          "text": "Allow the stream for maximum PR coverage.",
+          "metrics": {
+            "happiness": -30,
+            "candidate": 25,
+            "sanity": -25,
+            "time": 15
+          },
+          "feedback": "The legal department goes crazy over IP exposure and HR compliance. Sanity drops."
+        },
+        {
+          "text": "Ask them to blur out the proprietary code questions.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They comply! The stream is a hit, and you get 50 new candidates. Recruiter wins."
+        },
+        {
+          "text": "Turn the interview into a Q&A for the stream chat.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": -10,
+            "time": -20
+          },
+          "feedback": "You answer stream comments about company salaries. Sourcing time lost."
+        }
+      ]
+    },
+    {
+      "id": "cand_flat_files",
+      "title": "Database Skeptic",
+      "description": "The candidate argues that SQL databases are a security risk and that all data should be stored in flat text files on a USB drive.",
+      "speaker": "Engineering Lead",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Let them implement their design for the system test.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 20,
+            "sanity": -20,
+            "time": -15
+          },
+          "feedback": "They write a flat file parser. The database lead throws his hands up in despair. Sanity lost."
+        },
+        {
+          "text": "Fail them on the system design round.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "Clean decision. Sourcing resets but you avoided a security nightmare."
+        },
+        {
+          "text": "Ask them to explain how they would scale flat files.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 10,
+            "sanity": 5,
+            "time": -15
+          },
+          "feedback": "They talk for 45 minutes about folder structures. You lose valuable time."
+        },
+        {
+          "text": "Suggest they use a document database as a compromise.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They accept MongoDB. The system design is saved and grading is normal."
+        }
+      ]
+    },
+    {
+      "id": "cand_corrects_math",
+      "title": "Interviewer Corrected",
+      "description": "The candidate tells the Team Lead: 'Your math in this coding problem is wrong. The time complexity is O(N log N), not O(N)'. The candidate is wrong.",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Support the Team Lead and correct the candidate.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "The candidate gets defensive and starts arguing. The interview loop is tense."
+        },
+        {
+          "text": "Let them write their code using their time complexity.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": -10,
+            "time": -10
+          },
+          "feedback": "They write a slow algorithm. Team Lead is annoyed you didn't step in."
+        },
+        {
+          "text": "Ask them to prove their claim on the whiteboard.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -15,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They start the proof, realize their error, and apologize. The tension is resolved."
+        },
+        {
+          "text": "Change the interview topic to soft skills.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "You move away from the conflict. The interview finishes smoothly."
+        }
+      ]
+    },
+    {
+      "id": "cand_kitchen_walk",
+      "title": "The Chef Developer",
+      "description": "During the live coding test, the candidate walks to the kitchen with their wireless headset, frying eggs while explaining binary search.",
+      "speaker": "Recruiter Colleague",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Ask them to return to their computer.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They return, but burn their eggs. They are slightly grumpy the rest of the interview."
+        },
+        {
+          "text": "Let them cook. Multi-tasking is a good skill.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": -20,
+            "time": 10
+          },
+          "feedback": "The sound of oil sizzling drowns out their voice. Sourcing sanity drops."
+        },
+        {
+          "text": "Ask them for their recipe.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 20,
+            "sanity": 10,
+            "time": -15
+          },
+          "feedback": "They explain how to make the perfect omelet. Sourcing time lost, but candidate is happy."
+        },
+        {
+          "text": "Just focus on the code output in their shared screen.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They write clean code while cooking. Sourcing is successful!"
+        }
+      ]
+    },
+    {
+      "id": "cand_no_pants",
+      "title": "The Casual Attire Incident",
+      "description": "The candidate is wearing a nice suit jacket, but stands up to adjust their blinds, revealing they are wearing bright red boxer shorts.",
+      "speaker": "Hiring Manager",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Ignore it and pretend you saw nothing.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "The interview finishes successfully. The candidate is none the wiser. Recruiter is professional."
+        },
+        {
+          "text": "Laugh and tell them they have nice boxers.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -30,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "The candidate is mortified, turns off their camera, and withdraws from the process."
+        },
+        {
+          "text": "Send a private chat message suggesting they sit down.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They sit down quickly, send a private 'thank you!' back, and focus on the interview."
+        },
+        {
+          "text": "Add a dress code warning to candidate prep emails.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -5,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "You prevent future incidents, but spend time updating recruitment docs."
+        }
+      ]
+    },
+    {
+      "id": "cand_framework_author",
+      "title": "The Framework Author",
+      "description": "A candidate claims they wrote the exact routing framework our company uses, but the lead developer says they only opened a typo PR.",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Confront them about the exaggerations.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -35,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They withdraw immediately. Sourcing resets. You saved the team from a dishonest hire."
+        },
+        {
+          "text": "Ask them to explain how the framework routing works.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They struggle to explain it and admit they only did a small contribution. The interview proceeds honestly."
+        },
+        {
+          "text": "Ignore the boast. Their typo fix is still a contribution.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": -15,
+            "time": 10
+          },
+          "feedback": "They join, but developers are annoyed by their constant self-promotion in Slack."
+        },
+        {
+          "text": "Check their commit history live during the interview.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -20,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "The interview gets very awkward as you search GitHub. Time wasted."
+        }
+      ]
+    }
+  ],
+  "feedback": [
+    {
+      "id": "feed_red_black_tree",
+      "title": "Red-Black Tree Rejection",
+      "description": "The lead developer wants to reject a great candidate because they struggled to balance a Red-Black tree on the whiteboard, despite writing clean APIs.",
+      "speaker": "Engineering Lead",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Agree with the lead. Data structures are critical.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "Candidate is rejected. You spend weeks searching for another profile. Sourcing speed slows."
+        },
+        {
+          "text": "Push back. We build web APIs, not databases.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "You convince the manager to overlook it. Candidate gets the offer and accepts! Lead is grumpy."
+        },
+        {
+          "text": "Schedule a third round focusing on system integration.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": -15,
+            "sanity": -5,
+            "time": -20
+          },
+          "feedback": "Another interview round! Candidate is annoyed by the delays. Sourcing time lost."
+        },
+        {
+          "text": "Suggest the candidate work as a junior developer first.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -30,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "The candidate is insulted by the downgrade and withdraws from the loop."
+        }
+      ]
+    },
+    {
+      "id": "feed_too_polite",
+      "title": "Nice Dog Syndrome",
+      "description": "An HR colleague wants to hire a candidate purely because they were 'very polite' and their golden retriever waved at the camera.",
+      "speaker": "Recruiter Colleague",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Recommend them for hire. Vibe checks are important.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They are hired but can't configure a server. The development team is furious with HR."
+        },
+        {
+          "text": "Insist on looking at the technical test scores.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "You point out they failed the coding round. The team rejects them. HR colleague is sad."
+        },
+        {
+          "text": "Set up a technical follow-up interview.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 10,
+            "sanity": -5,
+            "time": -15
+          },
+          "feedback": "Sourcing delayed. The candidate fails the follow-up. Time lost, but correct decision made."
+        },
+        {
+          "text": "Tell them the dog must also pass the background check.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": -10,
+            "time": -10
+          },
+          "feedback": "A joke that defuses the argument. The team agrees to look for a better technical match."
+        }
+      ]
+    },
+    {
+      "id": "feed_same_university",
+      "title": "Alumni Nepotism",
+      "description": "The CEO wants to hire a candidate who failed the coding test because they both went to the same obscure university in Switzerland.",
+      "speaker": "CEO",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Approve the hire immediately. Happy CEO, happy life.",
+          "metrics": {
+            "happiness": 25,
+            "candidate": 15,
+            "sanity": -25,
+            "time": 20
+          },
+          "feedback": "CEO is thrilled. The engineering team is frustrated by the bypass of hiring standards. Sanity drops."
+        },
+        {
+          "text": "Present the coding test failure report to the CEO.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -10,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "CEO is annoyed by the 'bureaucracy' but agrees to follow standard process. You saved team standards."
+        },
+        {
+          "text": "Suggest a 3-month contract probation period.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "A perfect compromise. The candidate gets a chance, and engineering has a safety net."
+        },
+        {
+          "text": "Ask the university department head for a reference.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 5,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "You spend days contacting Swiss professors. Time wasted."
+        }
+      ]
+    },
+    {
+      "id": "feed_split_decision",
+      "title": "The Split Decision",
+      "description": "The interview feedback is split: Frontend Dev says 'Yes', Backend Lead says 'No', and the QA Lead is crying because the candidate didn't know QA terms.",
+      "speaker": "Recruiter Colleague",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Schedule a alignment meeting to resolve the split.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -10,
+            "sanity": -20,
+            "time": -15
+          },
+          "feedback": "A 2-hour meeting where everyone argues. Sanity drops, but you reach a compromise."
+        },
+        {
+          "text": "Reject the candidate. We need a clear consensus.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "Clean reject. Sourcing pipeline resets, but you avoided a team conflict."
+        },
+        {
+          "text": "Let the Hiring Manager make the final decision.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "Manager decides to hire! Sourcing is done, and manager is glad to have the authority."
+        },
+        {
+          "text": "Flip a coin to decide.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 15,
+            "sanity": 25,
+            "time": 20
+          },
+          "feedback": "Heads you hire. They join and are mediocre. Recruiter sanity saved, but manager is upset."
+        }
+      ]
+    },
+    {
+      "id": "feed_too_fast",
+      "title": "Too Fast to be True",
+      "description": "The candidate solved the 45-minute coding test in 8 minutes. The Lead Developer thinks they must have cheated or seen the question before.",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Accuse them of cheating and reject them.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -35,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "The candidate is furious. They post the code solution proving they just wrote it efficiently. Bad PR."
+        },
+        {
+          "text": "Ask the candidate to solve a new, custom question live.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 15,
+            "sanity": -15,
+            "time": -10
+          },
+          "feedback": "They solve it in 10 minutes live. They are a true genius! Sourcing delayed but quality confirmed."
+        },
+        {
+          "text": "Accept the result. They are just a 10x developer.",
+          "metrics": {
+            "happiness": 25,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 20
+          },
+          "feedback": "They are hired and speed up development by 200%. Manager is ecstatic."
+        },
+        {
+          "text": "Ask them how they found the solution so quickly.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 10,
+            "sanity": 10,
+            "time": -5
+          },
+          "feedback": "They explain they solved a similar problem in college. The explanation satisfies the team."
+        }
+      ]
+    },
+    {
+      "id": "feed_weird_github",
+      "title": "GitHub Username Horror",
+      "description": "The Engineering Lead refuses to hire a candidate because their GitHub username is 'xX_code_slayer_69_Xx', calling it 'unprofessional'.",
+      "speaker": "Engineering Lead",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Agree and reject. Professionalism starts with the username.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 5,
+            "time": -10
+          },
+          "feedback": "You reject them. Sourcing resets. You spend days looking for developers with boring names."
+        },
+        {
+          "text": "Ask the candidate to create a new GitHub account for work.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They agree and rename themselves 'John_Doe_Developer'. The manager is satisfied."
+        },
+        {
+          "text": "Tell the lead to focus on the code commits, not the name.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "You push the hire through. Candidate writes great code, and eventually everyone laughs at the name."
+        },
+        {
+          "text": "Ask the candidate why they chose that name.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 5,
+            "sanity": -5,
+            "time": -15
+          },
+          "feedback": "They explain it was their high school Xbox tag. Sourcing time wasted."
+        }
+      ]
+    },
+    {
+      "id": "feed_empty_form",
+      "title": "The Lazy Interviewer",
+      "description": "The interviewer submitted their feedback form with no details other than the single word 'No.' in the comments box.",
+      "speaker": "Recruiter Colleague",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Reject the candidate based on the 'No'.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -20,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "Clean reject. Sourcing resets, but you avoided a long investigation."
+        },
+        {
+          "text": "Demand the interviewer write a detailed feedback report.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 10,
+            "sanity": -15,
+            "time": -10
+          },
+          "feedback": "The developer is annoyed by the paperwork and writes a sarcastic review. Recruiter sanity drops."
+        },
+        {
+          "text": "Schedule a quick phone call to get verbal feedback.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "They explain they just didn't like the candidate's system architecture approach. You log it."
+        },
+        {
+          "text": "Bypass their feedback and check other interviewers' forms.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "The other forms are positive. The candidate gets hired, but the lazy interviewer is annoyed."
+        }
+      ]
+    },
+    {
+      "id": "feed_culture_no_code",
+      "title": "The Vibe Master",
+      "description": "Feedback: 'Excellent culture fit! They are funny, polite, and play board games. However, they could not write a simple loop in Python.'",
+      "speaker": "Hiring Manager",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Hire them. We can train them how to code.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": -25,
+            "time": -15
+          },
+          "feedback": "They join the team but require 20 hours a week of mentoring. Team velocity crashes."
+        },
+        {
+          "text": "Reject them. Coding is a baseline requirement.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "Clean reject. You save the team from training burden. Sourcing resets."
+        },
+        {
+          "text": "Recommend them for a Community Manager role.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They accept! A perfect role for their vibes. Sourcing is successful!"
+        },
+        {
+          "text": "Ask them to complete a Python bootcamp before joining.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -10,
+            "sanity": 5,
+            "time": -20
+          },
+          "feedback": "They agree, but it takes 3 months. Sourcing pipeline slows down."
+        }
+      ]
+    },
+    {
+      "id": "feed_genius_jerk",
+      "title": "The Toxic Genius",
+      "description": "Feedback: 'Technically, they are a genius. They solved every problem perfectly. However, they called our product legacy trash and refused to shake hands.'",
+      "speaker": "Engineering Lead",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Hire them anyway. We need their skills.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": -35,
+            "time": 25
+          },
+          "feedback": "They code fast, but three junior devs quit because of their toxic attitude. Sanity drops."
+        },
+        {
+          "text": "Reject them. No jerks policy.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -10,
+            "sanity": 25,
+            "time": -15
+          },
+          "feedback": "The team is relieved you protected the culture. You restart the search for a nice dev."
+        },
+        {
+          "text": "Suggest they work 100% isolated as a contractor.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They write code in isolation. No meetings. Everyone is happy and code gets built."
+        },
+        {
+          "text": "Make them apologize before sending the offer.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": -30,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They refuse to apologize and withdraw, calling the company 'fragile'."
+        }
+      ]
+    },
+    {
+      "id": "feed_visa_headache",
+      "title": "Visa Sponsorship Dilemma",
+      "description": "The candidate is a perfect fit, but needs immediate visa sponsorship, which will cost $10k and take 3 months of paperwork.",
+      "speaker": "HR Director",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Approve the sponsorship and begin paperwork.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 25,
+            "sanity": -30,
+            "time": -25
+          },
+          "feedback": "Manager is happy we got the talent, but you spend your nights doing legal filings. Sanity drops."
+        },
+        {
+          "text": "Reject them and search for local candidates.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "Sourcing resets. You save sponsorship costs, but manager is sad we lost a star candidate."
+        },
+        {
+          "text": "Offer they work remotely from their home country first.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They agree! You save budget and time, and candidate is happy to start working."
+        },
+        {
+          "text": "Ask them to pay for their own visa fees.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": -35,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They decline and report the company to local labor watchdogs. Bad candidate experience."
+        }
+      ]
+    },
+    {
+      "id": "feed_loud_keyboard",
+      "title": "The Mechanical Keyboard Rejection",
+      "description": "Feedback: 'The candidate's mechanical keyboard was so loud I couldn't hear their answers. Reject.' The candidate was using blue switches.",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Agree with the rejection. Good communication requires quiet typing.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -25,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "You reject them. Candidate is confused why their 'mechanical preference' was an issue."
+        },
+        {
+          "text": "Explain it was just a keyboard and ask to override.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They override the feedback and send the offer. Candidate accepts! Keyboard is banned in office."
+        },
+        {
+          "text": "Offer the candidate a silent keyboard as a hiring gift.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 25,
+            "sanity": -5,
+            "time": 5
+          },
+          "feedback": "They laugh, accept the gift, and agree to use it. Recruiter handles the issue creatively."
+        },
+        {
+          "text": "Ask the lead developer to wear noise-canceling headphones.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 15,
+            "sanity": 5,
+            "time": -10
+          },
+          "feedback": "The lead developer is insulted you called their setup into question. Friction arises."
+        }
+      ]
+    },
+    {
+      "id": "feed_no_kubernetes",
+      "title": "The K8s Nomenclature Test",
+      "description": "Feedback: 'They didn't know what Kubernetes stands for, only that it starts with K. Reject.' The candidate has 5 years of K8s admin experience.",
+      "speaker": "Engineering Lead",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Reject them. Basics are essential.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -20,
+            "sanity": 5,
+            "time": -15
+          },
+          "feedback": "Sourcing resets. You look for candidates who know that K8s means '8 letters between K and s'."
+        },
+        {
+          "text": "Push back. Admin experience is what matters, not trivia.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "You override the decision. The candidate joins and manages the cluster perfectly."
+        },
+        {
+          "text": "Send the candidate a Wikipedia article and reschedule.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": -15,
+            "sanity": -10,
+            "time": -20
+          },
+          "feedback": "A very awkward exchange. Candidate is insulted and withdraws. Time lost."
+        },
+        {
+          "text": "Quiz the lead developer on obscure trivia to prove a point.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 10,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "You embarrass the lead in front of the manager. They relent and approve the candidate."
+        }
+      ]
+    },
+    {
+      "id": "feed_tabs_vs_spaces",
+      "title": "The Tabs vs Spaces Rejection",
+      "description": "Feedback: 'They formatted their python solution using tabs instead of spaces. This goes against PEP 8. Automatic rejection.'",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Accept the reject. Coding standards are rules.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -15
+          },
+          "feedback": "You reject them. Sourcing resets. You spend days looking for PEP 8 purists."
+        },
+        {
+          "text": "Suggest the lead use an automatic formatter like Black.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "The lead developer realizes they can just auto-format code. Rejection withdrawn!"
+        },
+        {
+          "text": "Ask the candidate to format it again using spaces.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 5,
+            "sanity": -5,
+            "time": -10
+          },
+          "feedback": "They resubmit the file. Sourcing time lost, but candidate is saved."
+        },
+        {
+          "text": "Tell the lead developer to stop being so pedantic.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "The lead developer complains to the VP of Engineering about recruiter attitude."
+        }
+      ]
+    },
+    {
+      "id": "feed_slow_response",
+      "title": "The 10-Minute Response Rule",
+      "description": "Your colleague wants to reject a candidate because they took 24 hours to reply to a LinkedIn message, stating 'lacks sense of urgency'.",
+      "speaker": "Recruiter Colleague",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Agree. High velocity candidates reply fast.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "You reject. Sourcing pipeline resets. Sourcing takes longer."
+        },
+        {
+          "text": "Explain that candidates have jobs and lives.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "You continue the loop. Candidate turns out to be excellent and accepts the offer."
+        },
+        {
+          "text": "Set up an automated calendar reminder for the candidate.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": -10,
+            "sanity": 5,
+            "time": -10
+          },
+          "feedback": "The candidate feels micro-managed by the system notifications. Sourcing delayed."
+        },
+        {
+          "text": "Call the candidate directly on their personal phone.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": -15,
+            "time": 15
+          },
+          "feedback": "You get a fast answer but the candidate is annoyed by the cold call. Speed improved."
+        }
+      ]
+    },
+    {
+      "id": "feed_too_happy",
+      "title": "Excessive Cheerful Warning",
+      "description": "Feedback: 'The candidate was too happy during the interview. I worry they won't survive our high-pressure crunch environment.'",
+      "speaker": "Hiring Manager",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Reject. We need grim warriors, not cheerleaders.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -15
+          },
+          "feedback": "You reject them. Sourcing timeline slows as you search for depressed engineers."
+        },
+        {
+          "text": "Explain that optimism helps teams survive pressure.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "You convince the manager. Candidate joins and improves team morale instantly."
+        },
+        {
+          "text": "Warn the candidate about the office overtime culture.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -25,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They thank you for the warning and withdraw. Sourcing resets."
+        },
+        {
+          "text": "Arrange a meeting with the grumpy team lead.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 10,
+            "sanity": -15,
+            "time": -15
+          },
+          "feedback": "They meet and the candidate's cheerfulness annoys the lead. Loop delayed."
+        }
+      ]
+    },
+    {
+      "id": "feed_regex_solution",
+      "title": "The Black Magic Regex",
+      "description": "Feedback: 'The candidate solved the entire parsing problem using a single 150-character line of regex. I don't understand it, so it's bad code. Reject.'",
+      "speaker": "Engineering Lead",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Reject them. Code readability is critical.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "You reject them. Sourcing resets. You look for candidates who write standard loops."
+        },
+        {
+          "text": "Ask the candidate to rewrite it using standard loops.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They rewrite it cleanly. The engineering lead approves the revision. Sourcing saved."
+        },
+        {
+          "text": "Tell the lead developer to learn regex basics.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "The lead developer is furious about your comment and complains to HR."
+        },
+        {
+          "text": "Verify the regex performance in a testing compiler.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": -15,
+            "time": -15
+          },
+          "feedback": "You spend the afternoon compiling code. You confirm it is 10x faster. Lead relents."
+        }
+      ]
+    },
+    {
+      "id": "feed_ceo_ego",
+      "title": "The Unfunny Joke",
+      "description": "The CEO says: 'The candidate is technical, but when I made a joke about crypto, they didn't laugh. I don't think they respect leadership.'",
+      "speaker": "CEO",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Reject them. CEO alignment is paramount.",
+          "metrics": {
+            "happiness": 25,
+            "candidate": -20,
+            "sanity": -15,
+            "time": -15
+          },
+          "feedback": "You reject them. Sourcing resets. CEO is happy with your 'loyalty'."
+        },
+        {
+          "text": "Explain the candidate was just nervous during the loop.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "You push the hire through. Candidate joins and is a quiet, excellent worker."
+        },
+        {
+          "text": "Coach the candidate to laugh at CEO jokes in the next call.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": -10,
+            "time": -10
+          },
+          "feedback": "An awkward coaching session. Candidate laughs robotically on the call, CEO is happy."
+        },
+        {
+          "text": "Tell the CEO his joke was actually bad.",
+          "metrics": {
+            "happiness": -40,
+            "candidate": 10,
+            "sanity": 25,
+            "time": 5
+          },
+          "feedback": "A brave but suicidal move. CEO is furious, sanity saved because you don't care anymore."
+        }
+      ]
+    },
+    {
+      "id": "feed_git_internals",
+      "title": "Git Internal Trivia",
+      "description": "Feedback: 'They couldn't explain how Git compresses loose objects into packfiles. They just use git commit. Reject.'",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Reject. Git mastery is a sign of engineering depth.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 10,
+            "time": -15
+          },
+          "feedback": "Sourcing resets. You search for candidates who read Git source code."
+        },
+        {
+          "text": "Explain that 99% of devs just use basic Git commands.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "You override the decision. Candidate joins and codebase management is completely fine."
+        },
+        {
+          "text": "Send the candidate a Git tutorial and request re-evaluation.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -10,
+            "sanity": -5,
+            "time": -20
+          },
+          "feedback": "Candidate is insulted by the tutorial and withdraws from the pipeline."
+        },
+        {
+          "text": "Ask the lead developer if they know the answer without Googling.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They blush and admit they didn't know either. Rejection is quietly dropped."
+        }
+      ]
+    },
+    {
+      "id": "feed_work_life_balance",
+      "title": "Red Flag Questions",
+      "description": "Feedback: 'The candidate asked three questions about work-life balance and weekend overtime. They lack commitment. Reject.'",
+      "speaker": "Hiring Manager",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Reject. We need people who are willing to grind.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": -25,
+            "sanity": -15,
+            "time": -10
+          },
+          "feedback": "You reject them. Sourcing speed slows as active candidates hear we are a sweatshop."
+        },
+        {
+          "text": "Push back. Asking about balance is healthy.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "You convince the manager to proceed. The candidate accepts and helps organize task schedules."
+        },
+        {
+          "text": "Lie to the candidate and say we never work overtime.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -30,
+            "sanity": -10,
+            "time": 10
+          },
+          "feedback": "They accept, discover the reality on week one, and quit. Pipeline completely ruined."
+        },
+        {
+          "text": "Suggest a flexible hours arrangement in the contract.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They accept! Sourcing is done and manager gets their developer hours balanced."
+        }
+      ]
+    },
+    {
+      "id": "feed_no_hobbies",
+      "title": "The No-Hobby Resume",
+      "description": "Feedback: 'The candidate didn't list any hobbies or personal interests. Are they a robot? I don't think they'd fit our fun culture.'",
+      "speaker": "HR Director",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Reject. We need culture builders who have a life.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "You reject them. Sourcing resets. You search for candidates who play guitar."
+        },
+        {
+          "text": "Ask the candidate to send a list of their hobbies.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They reply: 'I like baking sourdough bread.' The HR director is delighted and approves."
+        },
+        {
+          "text": "Tell HR that hobbies are irrelevant to writing SQL.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": 20,
+            "time": 15
+          },
+          "feedback": "You override the culture check. Candidate is hired and writes excellent database code."
+        },
+        {
+          "text": "Add 'Must love dogs and ping-pong' to the job ad.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -10,
+            "sanity": 10,
+            "time": -15
+          },
+          "feedback": "You spend time updating corporate templates. Sourcing speed drops."
+        }
+      ]
+    },
+    {
+      "id": "feed_competitor_tshirt",
+      "title": "The Competitor's Logo",
+      "description": "Feedback: 'The candidate wore a t-shirt with a competitor's logo during the Zoom interview. Disrespectful. Reject.'",
+      "speaker": "Hiring Manager",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Agree. Loyalty begins in the interview.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "You reject them. Sourcing resets. You remind candidates about dress codes."
+        },
+        {
+          "text": "Explain it was probably just a free tech conference shirt.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "You convince the manager. Candidate is hired and accepts the offer, wearing our shirt on day one."
+        },
+        {
+          "text": "Send the candidate a company branded shirt and ask to restart.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "Sourcing delayed. Candidate thinks it's funny, wears the shirt, and passes the loop."
+        },
+        {
+          "text": "Tell the manager their insecurity is showing.",
+          "metrics": {
+            "happiness": -35,
+            "candidate": 10,
+            "sanity": 20,
+            "time": 5
+          },
+          "feedback": "A bold comment! Manager is offended, but you stand your ground. Sanity saved."
+        }
+      ]
+    },
+    {
+      "id": "feed_bubble_sort",
+      "title": "The Bubble Sort Incident",
+      "description": "Feedback: 'The candidate solved the array sorting question using a bubble sort. My eyes are bleeding. Reject.'",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Reject them. Bubble sort is O(N^2) and unacceptable.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "You reject them. Sourcing resets. Sourcing speed slows."
+        },
+        {
+          "text": "Explain that bubble sort is simple to write under pressure.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They are hired. They write standard libraries for the product and perform well."
+        },
+        {
+          "text": "Ask them to optimize their solution in a follow-up email.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": -5
+          },
+          "feedback": "They reply with a quicksort solution. The engineering lead is satisfied."
+        },
+        {
+          "text": "Quiz the interviewer on quicksort implementation details.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "The interviewer gets annoyed by your test. Tension arises in engineering."
+        }
+      ]
+    },
+    {
+      "id": "feed_microservices_obsession",
+      "title": "Microservices for a Blog",
+      "description": "Feedback: 'The candidate designed our simple company blog using 45 different dockerized microservices and a service mesh. Over-engineered. Reject.'",
+      "speaker": "Engineering Lead",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Reject them. We need simple, maintainable solutions.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "Clean reject. Sourcing resets. You focus on devs who write clean monoliths."
+        },
+        {
+          "text": "Explain that they were just trying to show their cloud skills.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "You hire them. On week two, they rewrite our billing system into 5 lambdas. Sourcing done."
+        },
+        {
+          "text": "Ask them to design the blog using a monolith in a new round.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -15,
+            "sanity": -5,
+            "time": -20
+          },
+          "feedback": "Candidate is annoyed by the rework request. Sourcing delayed."
+        },
+        {
+          "text": "Check if they can write a simple HTML page.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 10,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They prove they know the basics. Sourcing is successful!"
+        }
+      ]
+    },
+    {
+      "id": "feed_too_desperate",
+      "title": "Desperation Red Flag",
+      "description": "Feedback: 'The candidate sent a thank-you email 5 minutes after the interview, and followed up again this morning. Seems desperate and low-value. Reject.'",
+      "speaker": "Hiring Manager",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Reject. High-value candidates are hard to get.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "You reject them. Sourcing resets. You look for candidates who ghost your messages."
+        },
+        {
+          "text": "Explain that they are just excited about the company.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They join and are the most dedicated worker on the team. Manager is glad you pushed back."
+        },
+        {
+          "text": "Ask the candidate to wait 48 hours before writing again.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": -10,
+            "sanity": 5,
+            "time": -5
+          },
+          "feedback": "An awkward exchange. Candidate feels self-conscious. Sourcing delayed."
+        },
+        {
+          "text": "Tell the manager they are overthinking email timings.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 10,
+            "sanity": 20,
+            "time": 5
+          },
+          "feedback": "Manager is annoyed but drops the objection. Sourcing is completed."
+        }
+      ]
+    },
+    {
+      "id": "feed_ai_generated_desc",
+      "title": "LLM Generated Vibe Check",
+      "description": "Feedback: 'The candidate's answers to our architecture questions sounded exactly like a GPT-4 output. I think they were using live text-to-speech.'",
+      "speaker": "Engineering Lead",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Reject. Cheating cannot be tolerated.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "Sourcing resets. You look for candidates who stumble and sound human."
+        },
+        {
+          "text": "Ask them a highly specific question about a personal project.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They answer naturally and prove they know their stuff. Sourcing saved!"
+        },
+        {
+          "text": "Ignore. LLM-level answers mean they know the documentation.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 20,
+            "sanity": -10,
+            "time": 15
+          },
+          "feedback": "They join the team. They are efficient at writing boilerplate, but struggle with debugging."
+        },
+        {
+          "text": "Verify their identity via a video check.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 5,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They pass the check. The interview feedback is approved."
+        }
+      ]
+    }
+  ],
+  "offer": [
+    {
+      "id": "off_unlimited_snacks",
+      "title": "The Matcha Clause",
+      "description": "The candidate refuses to sign the offer letter unless we add a legally binding clause guaranteeing unlimited organic ceremonial grade matcha in the kitchen.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Add the clause. Whatever it takes to close.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": -25,
+            "time": 15
+          },
+          "feedback": "Legal is furious you modified the template. Candidate signs! Kitchen budget is blown."
+        },
+        {
+          "text": "Refuse and offer a standard coffee package.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They reject the offer, stating the company does not value 'wellness'. Sourcing resets."
+        },
+        {
+          "text": "Provide a $50/month tea stipend instead.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They accept! You saved the template and closed the deal. Recruiter win."
+        },
+        {
+          "text": "Ask the CEO to explain the kitchen policies.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -10,
+            "sanity": 5,
+            "time": -15
+          },
+          "feedback": "CEO gets into a debate with the candidate. Time wasted, offer delayed."
+        }
+      ]
+    },
+    {
+      "id": "off_bitcoin_signing",
+      "title": "Crypto Signing Bonus",
+      "description": "The candidate wants their $10k signing bonus paid in Bitcoin, citing 'inflation hedging'.",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Agree and coordinate with finance.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": -30,
+            "time": 5
+          },
+          "feedback": "Accounting has to open a corporate Coinbase account. It takes weeks of paperwork. Sanity lost."
+        },
+        {
+          "text": "Refuse. Standard bank transfers only.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They reject. Sourcing resets. Manager complains about rigid finance rules."
+        },
+        {
+          "text": "Offer a higher cash bonus instead ($12k fiat).",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "They accept! You closed the role, but spent more of your budget."
+        },
+        {
+          "text": "Suggest they buy crypto themselves immediately after payment.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 20,
+            "time": 15
+          },
+          "feedback": "They realize they can do that. Offer signed, no extra paperwork needed!"
+        }
+      ]
+    },
+    {
+      "id": "off_fake_counter",
+      "title": "The Ghost Counter-Offer",
+      "description": "Candidate demands we match a counter-offer of $250k from 'Stealth Startup LLC'. You suspect the startup doesn't exist.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Match the offer. We can't lose them.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 25,
+            "sanity": -15,
+            "time": 10
+          },
+          "feedback": "They sign. Later, you find out they lied. Budget is blown and manager is unhappy."
+        },
+        {
+          "text": "Ask to see the written offer letter for verification.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -30,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They make excuses, lower their demands, and eventually sign. You saved budget!"
+        },
+        {
+          "text": "Refuse to match and let them go.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -10,
+            "sanity": 20,
+            "time": -15
+          },
+          "feedback": "They drop out. Sourcing resets. You spend days looking for a replacement."
+        },
+        {
+          "text": "Offer additional equity instead of matching cash.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "They accept! A clean resolution that saves cash budget."
+        }
+      ]
+    },
+    {
+      "id": "off_coffee_snob",
+      "title": "Coffee Quality Rejection",
+      "description": "The candidate rejects our offer because during the office tour, they noticed the kitchen uses pod-based coffee rather than fresh espresso beans.",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Buy a $1,000 espresso machine for the team.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 25,
+            "sanity": -15,
+            "time": 10
+          },
+          "feedback": "The candidate signs! The entire team is ecstatic about the coffee upgrade."
+        },
+        {
+          "text": "Tell them they can bring their own coffee maker.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -20,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They decline the offer, stating the corporate infrastructure is 'cheap'."
+        },
+        {
+          "text": "Suggest remote work so they can brew at home.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They accept! You saved budget and closed the role."
+        },
+        {
+          "text": "Explain that pods are recycled.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -15,
+            "sanity": 5,
+            "time": -5
+          },
+          "feedback": "They still decline. Sourcing resets."
+        }
+      ]
+    },
+    {
+      "id": "off_equity_scam",
+      "title": "Equity vs Salary",
+      "description": "The CEO wants you to offer a candidate 99% stock equity and only $10k base salary, calling it 'giving them true skin in the game'.",
+      "speaker": "CEO",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Send the offer. CEO knows best.",
+          "metrics": {
+            "happiness": 25,
+            "candidate": -45,
+            "sanity": -20,
+            "time": -15
+          },
+          "feedback": "The candidate laughs at you, posts the offer to Reddit, and gets you mocked online."
+        },
+        {
+          "text": "Explain that candidates need money to pay rent.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "CEO complains you lack 'startup hustle', but lets you offer a standard salary range."
+        },
+        {
+          "text": "Suggest a 50/50 mix of salary and equity.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They accept! You balanced the CEO's desires and the candidate's needs."
+        },
+        {
+          "text": "Ask the candidate if they are interested in stock options.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 10,
+            "sanity": 10,
+            "time": -5
+          },
+          "feedback": "They request a higher base anyway. Sourcing delayed."
+        }
+      ]
+    },
+    {
+      "id": "off_six_months",
+      "title": "The Six-Month Sabbatical",
+      "description": "Candidate accepts the offer but asks to push their start date back by 6 months so they can 'find themselves in South America'.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Approve the delay. We can wait for talent.",
+          "metrics": {
+            "happiness": -30,
+            "candidate": 25,
+            "sanity": 10,
+            "time": -35
+          },
+          "feedback": "The manager is furious about the empty seat. Sourcing time crumbles."
+        },
+        {
+          "text": "Refuse. We need someone to start in 4 weeks.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They decline and head south anyway. You restart the sourcing pipeline."
+        },
+        {
+          "text": "Offer a 2-month start delay instead.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "A perfect compromise. They take a short break and join on time."
+        },
+        {
+          "text": "Suggest they consult for us part-time from abroad.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 20,
+            "sanity": -10,
+            "time": 5
+          },
+          "feedback": "They agree to write code from the beach. Legal is annoyed, but manager gets code built."
+        }
+      ]
+    },
+    {
+      "id": "off_reference_school",
+      "title": "Primary School Reference Check",
+      "description": "The HR Director refuses to release the offer letter until we get a reference check from the candidate's middle school teacher.",
+      "speaker": "HR Director",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Try to contact the school and find the teacher.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -15,
+            "sanity": -35,
+            "time": -20
+          },
+          "feedback": "You spend days calling defunct schools. Sourcing time lost, sanity zero."
+        },
+        {
+          "text": "Push back. Professional reference checks are sufficient.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "HR director sighs and waives the requirement. Offer letter is sent!"
+        },
+        {
+          "text": "Ask the candidate to write their own reference letter.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 10,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "Candidate writes a funny letter. Sourcing delayed but completed."
+        },
+        {
+          "text": "Fake the reference call yourself.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 20,
+            "sanity": -10,
+            "time": 15
+          },
+          "feedback": "You put on a high voice and pretend to be 'Mrs. Smith'. They pass. If compliance finds out, you're dead."
+        }
+      ]
+    },
+    {
+      "id": "off_ghost_day_one",
+      "title": "Day One Ghosting",
+      "description": "It is Monday morning. The candidate signed their offer last week, but hasn't logged into Slack or answered their phone.",
+      "speaker": "Hiring Manager",
+      "mood": "ANGRY",
+      "choices": [
+        {
+          "text": "Keep calling them every 15 minutes.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -15,
+            "sanity": -25,
+            "time": -20
+          },
+          "feedback": "No answer. You waste your morning calling a brick wall. Sanity drops."
+        },
+        {
+          "text": "Immediately contact the runner-up candidate.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 10,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "Runner-up candidate is still interested and accepts! You saved the placement."
+        },
+        {
+          "text": "Send a formal email threatening legal action.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": -35,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They reply saying they were in the hospital. The company looks toxic. Bad PR."
+        },
+        {
+          "text": "Wait until Tuesday before taking action.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 0,
+            "sanity": 20,
+            "time": -15
+          },
+          "feedback": "You save sanity, but lose a critical day of project setup."
+        }
+      ]
+    },
+    {
+      "id": "off_jira_rejection",
+      "title": "The Jira Dealbreaker",
+      "description": "The candidate reviews our engineering onboarding document, notices we use Jira, and threatens to reject the offer unless we migrate to Linear.",
+      "speaker": "Candidate",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Promise them we are migrating to Linear next month.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 25,
+            "sanity": -20,
+            "time": 10
+          },
+          "feedback": "They sign. But when they find out you lied, they are very upset. Sanity drops."
+        },
+        {
+          "text": "Refuse. Jira is our company standard.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They reject the offer. You restart sourcing. Manager complains about rigid tooling."
+        },
+        {
+          "text": "Offer them admin rights to configure Jira however they want.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They accept! They spend their first week fixing Jira workflows, which developers actually love."
+        },
+        {
+          "text": "Explain that tool choices are decided by the VP.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": -10,
+            "sanity": 10,
+            "time": -5
+          },
+          "feedback": "They decide to accept anyway, but complain about Jira constantly. Offer closed."
+        }
+      ]
+    },
+    {
+      "id": "off_grand_master",
+      "title": "Title Inflation",
+      "description": "Candidate demands the official job title 'Grand Master of Code and Infrastructure' instead of 'Software Engineer II' on their contract.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Grant the title. Titles are free.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They sign! Other developers are annoyed and demand titles like 'Lord of CSS'. Sanity drops later."
+        },
+        {
+          "text": "Refuse. It violates corporate grading systems.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They reject. Sourcing resets. Manager is annoyed you fought over a string title."
+        },
+        {
+          "text": "Offer the title internally, but keep 'SE II' on contract.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They accept! Legal is happy, candidate gets their Slack status title. Recruiter win."
+        },
+        {
+          "text": "Ask HR Director to approve a custom title exception.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 10,
+            "sanity": -15,
+            "time": -10
+          },
+          "feedback": "You spend days in meetings with HR. Sourcing delayed."
+        }
+      ]
+    },
+    {
+      "id": "off_bali_remote",
+      "title": "Tax Haven Remote",
+      "description": "Candidate wants to sign but wants their salary paid to an offshore company in Panama to 'minimize tax exposure'.",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Approve it. Legal can figure it out.",
+          "metrics": {
+            "happiness": -35,
+            "candidate": 25,
+            "sanity": -25,
+            "time": 10
+          },
+          "feedback": "The compliance team has a panic attack. The company is audited by tax authorities. Major loss."
+        },
+        {
+          "text": "Refuse. We only pay local residents directly.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They reject. Sourcing resets. Sourcing speed drops."
+        },
+        {
+          "text": "Suggest they set up as a standard local contractor.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They agree. Legal is happy, candidate handles their own taxes. Offer closed!"
+        },
+        {
+          "text": "Offer them tax assistance services.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 10,
+            "sanity": 5,
+            "time": -15
+          },
+          "feedback": "You spend days researching tax agencies. Sourcing delayed."
+        }
+      ]
+    },
+    {
+      "id": "off_ergonomic_footrest",
+      "title": "The $5,000 Chair Clause",
+      "description": "The candidate demands a contract rider containing a $5,000 budget for a custom orthopedic chair and automated footrest.",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Approve the budget rider.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": -10,
+            "time": 10
+          },
+          "feedback": "Finance complains, but candidate signs. The office manager is jealous of the chair."
+        },
+        {
+          "text": "Offer our standard high-quality office chair.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They reject. 'I won't sacrifice my spine for your KPI,' they email. Sourcing resets."
+        },
+        {
+          "text": "Allow them to work remotely and use their own setup.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They accept! You saved company cash and closed the role."
+        },
+        {
+          "text": "Ask for doctor verification of spine issues.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -30,
+            "sanity": 5,
+            "time": -15
+          },
+          "feedback": "Candidate is insulted by the request and drops out. Bad candidate experience."
+        }
+      ]
+    },
+    {
+      "id": "off_insurance_dread",
+      "title": "Existential Dread Insurance",
+      "description": "Candidate asks: 'Does the company health insurance cover therapy for existential dread related to working in tech?'",
+      "speaker": "Candidate",
+      "mood": "SAD",
+      "choices": [
+        {
+          "text": "Say yes. Mental health is 100% covered.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They sign! They are very happy with our health plan. Offer closed."
+        },
+        {
+          "text": "Say no. Standard dental and optical only.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They reject the offer, saying the company lacks empathy. Sourcing resets."
+        },
+        {
+          "text": "Offer a corporate subscription to a meditation app.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They accept! You closed the role and saved cash budget."
+        },
+        {
+          "text": "Ask them if they are fit to write code.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": -35,
+            "sanity": 5,
+            "time": -15
+          },
+          "feedback": "You offend the candidate. They withdraw and tell their network. Bad PR."
+        }
+      ]
+    },
+    {
+      "id": "off_sad_face",
+      "title": "The Sad Face Counter",
+      "description": "Instead of a written counter-offer, the candidate emails you a drawing of a sad face next to our proposed salary number.",
+      "speaker": "Recruiter Colleague",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Increase the salary by 10% and send it back.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "They reply with a smiley face and sign! You closed the role."
+        },
+        {
+          "text": "Send a sad face drawing back and stick to the budget.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 20,
+            "time": -10
+          },
+          "feedback": "They appreciate the humor but reject the offer. Sourcing resets."
+        },
+        {
+          "text": "Call them to discuss the number verbally.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 10,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "You find a middle ground. They sign. Sourcing completed successfully."
+        },
+        {
+          "text": "Ignore the message and wait for them to write back.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -10,
+            "sanity": 15,
+            "time": -15
+          },
+          "feedback": "They assume you are ghosting them and accept another offer. Sourcing resets."
+        }
+      ]
+    },
+    {
+      "id": "off_hoodie_bribe",
+      "title": "Hoodie Bribes",
+      "description": "Your colleague suggests offering a candidate a limited-edition corporate hoodie instead of the $5k salary increase they requested.",
+      "speaker": "Recruiter Colleague",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Send the hoodie offer. Swag is powerful.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -35,
+            "sanity": 15,
+            "time": -15
+          },
+          "feedback": "They reject and mock us on Twitter: 'Company tried to pay my rent with cotton.' Sourcing resets."
+        },
+        {
+          "text": "Approve the $5k increase instead.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They sign! Budget is slightly higher, but the role is closed successfully."
+        },
+        {
+          "text": "Send both. The salary increase AND the hoodie.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 30,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "They are delighted! Manager is happy the talent is secured. Recruiter win."
+        },
+        {
+          "text": "Suggest they buy the hoodie from the company store.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": -30,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "They reject the offer immediately. Very bad candidate experience."
+        }
+      ]
+    },
+    {
+      "id": "off_tesla_lease",
+      "title": "The Tesla Compensation",
+      "description": "The CEO wants to offer the candidate a leased Tesla under the company's name instead of a base salary increase, calling it 'a mobile office'.",
+      "speaker": "CEO",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Offer the Tesla. Sounds amazing.",
+          "metrics": {
+            "happiness": 25,
+            "candidate": -15,
+            "sanity": -25,
+            "time": 5
+          },
+          "feedback": "The candidate declines. 'I can't pay my grocery bills with a car lease,' they state. Sourcing resets."
+        },
+        {
+          "text": "Push back. Stick to cash salary.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "CEO complains you lack vision. But candidate accepts the cash offer. Sourcing completed."
+        },
+        {
+          "text": "Offer a transportation allowance instead.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They accept! You closed the role and saved cash budget."
+        },
+        {
+          "text": "Ask accounting if the lease has tax benefits.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 5,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "You spend days in meetings with tax lawyers. Sourcing delayed."
+        }
+      ]
+    },
+    {
+      "id": "off_double_job",
+      "title": "Double Dip Approval",
+      "description": "The candidate accepts our offer, but asks if they can keep their other full-time remote engineering job 'for a few hours a week'.",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Approve the request. We need their skills.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 25,
+            "sanity": -25,
+            "time": 10
+          },
+          "feedback": "They join, but are constantly missed in meetings. The manager is furious with you."
+        },
+        {
+          "text": "Refuse. Our contracts require exclusive employment.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They reject the offer and stay at their other job. Sourcing resets."
+        },
+        {
+          "text": "Offer them a freelance contract instead.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They agree! You save budget and close the role. Sourcing completed."
+        },
+        {
+          "text": "Ask them to sign a strict moonlighting policy.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": -15,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They decline the offer. You protected the company, but have to restart."
+        }
+      ]
+    },
+    {
+      "id": "off_library_overdue",
+      "title": "The Library Book Crime",
+      "description": "The background check flags the candidate has a library book ('Introduction to Algorithms') overdue since 2012. HR wants to reject them.",
+      "speaker": "HR Director",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Agree with HR. Integrity is everything.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -35,
+            "sanity": 5,
+            "time": -20
+          },
+          "feedback": "You reject them. Candidate is furious. Sourcing resets. Sourcing speed slows."
+        },
+        {
+          "text": "Explain it was 14 years ago and waive the check.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 25,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They sign! They actually bring the book to the office on day one to show they returned it."
+        },
+        {
+          "text": "Offer to pay the library fee on their behalf.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "You pay the $15 fee. They sign! Recruiter handles the issue creatively."
+        },
+        {
+          "text": "Ask the candidate why they kept the book.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 5,
+            "sanity": -5,
+            "time": -15
+          },
+          "feedback": "They explain they lost it in a move. Sourcing delayed."
+        }
+      ]
+    },
+    {
+      "id": "off_fun_fridays",
+      "title": "Mandatory Fun Fridays",
+      "description": "Candidate rejects our offer because a Glassdoor review mentioned we have 'mandatory fun Fridays where everyone must sing karaoke'.",
+      "speaker": "Candidate",
+      "mood": "STRESSED",
+      "choices": [
+        {
+          "text": "Explain that karaoke is completely optional.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They sign! They are relieved they don't have to sing. Offer closed."
+        },
+        {
+          "text": "Defend the karaoke culture. It builds teamwork.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -30,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They refuse. 'I write code, not show tunes,' they reply. Sourcing resets."
+        },
+        {
+          "text": "Offer them a written waiver exempting them from fun.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They accept the waiver and sign! Manager is annoyed at the exception."
+        },
+        {
+          "text": "Ask the team to cancel karaoke.",
+          "metrics": {
+            "happiness": -35,
+            "candidate": 10,
+            "sanity": -10,
+            "time": -15
+          },
+          "feedback": "The team is furious you canceled their favorite event. Morale drops."
+        }
+      ]
+    },
+    {
+      "id": "off_quiet_zone",
+      "title": "The Silence Clause",
+      "description": "Candidate wants to sign but demands a written agreement that no one is allowed to speak to them verbally before 11 AM.",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Agree. Quiet mornings are productive.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They sign! They write clean code in silence. Manager is happy."
+        },
+        {
+          "text": "Refuse. Collaboration requires communication.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": -10
+          },
+          "feedback": "They reject. Sourcing resets. Sourcing speed drops."
+        },
+        {
+          "text": "Suggest they work remotely for the morning hours.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "They accept! You saved budget and closed the role."
+        },
+        {
+          "text": "Offer them noise-canceling headphones instead.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They accept the headphones and sign! Recruiter win."
+        }
+      ]
+    },
+    {
+      "id": "off_home_expenses",
+      "title": "Remote Expense Demands",
+      "description": "Candidate demands the company pay for their home internet, home electricity, and $200/month coffee bean subscription.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Approve the expenses. We need the hire.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": -10,
+            "time": 10
+          },
+          "feedback": "Finance is annoyed but candidate signs. The budget is slightly higher."
+        },
+        {
+          "text": "Refuse home expenses. Standard salary only.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -20,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They reject the offer. Sourcing resets."
+        },
+        {
+          "text": "Provide a flat $50/month home office stipend.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They accept! You balanced the budget and closed the role."
+        },
+        {
+          "text": "Suggest they work from the office to get free coffee.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": 5,
+            "time": 5
+          },
+          "feedback": "They decline and withdraw. Sourcing resets."
+        }
+      ]
+    },
+    {
+      "id": "off_four_hours",
+      "title": "The Four-Hour Workday",
+      "description": "Candidate accepts the offer but states they will only work 4 hours a day for 'mental hygiene', despite the full-time contract.",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Agree. Quality of code is what matters.",
+          "metrics": {
+            "happiness": -30,
+            "candidate": 25,
+            "sanity": -20,
+            "time": -20
+          },
+          "feedback": "They sign. Later, team velocity drops and developers complain. Sanity lost."
+        },
+        {
+          "text": "Refuse. Full-time means 8 hours.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They reject. Sourcing resets. Manager is glad you avoided a slacker."
+        },
+        {
+          "text": "Offer them a part-time contract at 50% salary.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 10,
+            "time": 15
+          },
+          "feedback": "They accept! You saved company cash and closed the role."
+        },
+        {
+          "text": "Ask manager to monitor their output closely.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -10,
+            "sanity": -5,
+            "time": 5
+          },
+          "feedback": "Candidate feels micro-managed and quits on week two. Sourcing resets."
+        }
+      ]
+    },
+    {
+      "id": "off_five_monitors",
+      "title": "The Monitor Wall",
+      "description": "Candidate refuses to sign unless we provide them a custom budget for 5 curved gaming monitors for their home office.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Approve the monitor budget.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 25,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "Finance grumbles, but candidate signs and starts coding."
+        },
+        {
+          "text": "Offer our standard dual monitor setup.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": -20,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They reject the offer, calling our hardware 'legacy'. Sourcing resets."
+        },
+        {
+          "text": "Provide a flat $500 hardware stipend.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They accept and buy their own monitors. Role closed!"
+        },
+        {
+          "text": "Ask why they need 5 monitors.",
+          "metrics": {
+            "happiness": -5,
+            "candidate": 5,
+            "sanity": -5,
+            "time": -15
+          },
+          "feedback": "They spend an hour explaining their trading screen setup. Sourcing delayed."
+        }
+      ]
+    },
+    {
+      "id": "off_support_pig",
+      "title": "The Support Pig",
+      "description": "Candidate asks if they can bring their support pig ('Hamilton') to the office, stating it is house-trained.",
+      "speaker": "Candidate",
+      "mood": "HAPPY",
+      "choices": [
+        {
+          "text": "Say yes. Hamilton is welcome.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 25,
+            "sanity": -20,
+            "time": 10
+          },
+          "feedback": "Hamilton eats the CEO's lunch and smells bad. HR is furious with you."
+        },
+        {
+          "text": "Say no. Pets are not allowed in the building.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -25,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They reject the offer. Sourcing resets."
+        },
+        {
+          "text": "Suggest remote work to keep Hamilton happy.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 20,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They accept! Sourcing successfully completed."
+        },
+        {
+          "text": "Ask to see photos of Hamilton.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 10,
+            "sanity": 10,
+            "time": -5
+          },
+          "feedback": "You look at photos of pigs. Sourcing delayed."
+        }
+      ]
+    },
+    {
+      "id": "off_tax_burden",
+      "title": "The Tax Excuse",
+      "description": "Candidate rejects the offer because the salary is too high and they 'don't want the tax burden', requesting we pay them in Amazon gift cards.",
+      "speaker": "Candidate",
+      "mood": "NORMAL",
+      "choices": [
+        {
+          "text": "Refuse. We do not pay in gift cards.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "They decline the offer. Sourcing resets."
+        },
+        {
+          "text": "Consult with accounting on gift card limits.",
+          "metrics": {
+            "happiness": -30,
+            "candidate": 10,
+            "sanity": -25,
+            "time": -15
+          },
+          "feedback": "Accounting rejects the proposal immediately. Time wasted, sanity lost."
+        },
+        {
+          "text": "Suggest they donate the excess salary to charity.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 15,
+            "sanity": 15,
+            "time": 15
+          },
+          "feedback": "They realize they can do that. Offer signed! Recruiter handles the issue creatively."
+        },
+        {
+          "text": "Offer a lower salary to reduce their taxes.",
+          "metrics": {
+            "happiness": 25,
+            "candidate": -25,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "They accept! You saved company budget, but candidate feels slightly cheated."
+        }
+      ]
+    }
+  ],
+  "chaos": [
+    {
+      "id": "chaos_aws_down",
+      "title": "🚨 AWS Down!",
+      "description": "AWS goes down globally. The corporate server is offline, and all live coding interviews are failing.",
+      "choices": [
+        {
+          "text": "Reschedule all interviews to next week.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 15,
+            "sanity": -15,
+            "time": -20
+          },
+          "feedback": "Scheduling nightmare. Sourcing speed drops, but candidates appreciate the flexibility."
+        },
+        {
+          "text": "Ask candidates to solve logic puzzles verbally.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "Interviews completed! Some candidates are annoyed by the change of format, but progress is saved."
+        }
+      ]
+    },
+    {
+      "id": "chaos_ceo_tweet",
+      "title": "🚨 The CEO Tweeted!",
+      "description": "The CEO tweets that 'remote work is for lazy people who want to sleep all day'. Three candidates in final loop immediately withdraw.",
+      "choices": [
+        {
+          "text": "Apologize to candidates and promise RTO won't affect them.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": 25,
+            "sanity": -20,
+            "time": -10
+          },
+          "feedback": "You manage to save two candidates, but spend your day writing apologies. Sanity lost."
+        },
+        {
+          "text": "Defend the CEO and pivot to RTO sourcing.",
+          "metrics": {
+            "happiness": 25,
+            "candidate": -35,
+            "sanity": 10,
+            "time": 10
+          },
+          "feedback": "You find candidates willing to work in-office, but candidate rating drops significantly."
+        }
+      ]
+    },
+    {
+      "id": "chaos_coffee_shortage",
+      "title": "🚨 Coffee Shortage!",
+      "description": "A global logistics crisis causes the office coffee machine to run dry. The development team is moving at 10% speed.",
+      "choices": [
+        {
+          "text": "Buy premium coffee beans out of your own pocket.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 10,
+            "sanity": -15,
+            "time": 10
+          },
+          "feedback": "The developers love you! Interviews proceed on time, but your wallet is lighter."
+        },
+        {
+          "text": "Tell developers to drink green tea instead.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": -10,
+            "sanity": 15,
+            "time": -25
+          },
+          "feedback": "Developers go on strike. Sourcing speed slows down as interviewers ghost calls."
+        }
+      ]
+    },
+    {
+      "id": "chaos_influencer_mock",
+      "title": "🚨 Viral Mockery!",
+      "description": "A LinkedIn influencer mocks our job description because we requested '10 years of React experience'. The post gets 50,000 likes.",
+      "choices": [
+        {
+          "text": "Rewrite the job ad immediately and post an apology.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 25,
+            "sanity": -15,
+            "time": -15
+          },
+          "feedback": "The drama dies down. You get more applicants, but lost hours updating job listings."
+        },
+        {
+          "text": "Ignore the post. All PR is good PR.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -20,
+            "sanity": 20,
+            "time": 10
+          },
+          "feedback": "The drama continues. You get a few high-ego applicants who think the posting is funny."
+        }
+      ]
+    },
+    {
+      "id": "chaos_internet_cut",
+      "title": "🚨 Fiber Optic Cut!",
+      "description": "A construction crew cuts the office fiber cable. The office has no internet for 48 hours.",
+      "choices": [
+        {
+          "text": "Work from a local coffee shop using mobile hotspots.",
+          "metrics": {
+            "happiness": 5,
+            "candidate": 15,
+            "sanity": -25,
+            "time": -10
+          },
+          "feedback": "You complete the calls, but the connection is slow. Sanity drops."
+        },
+        {
+          "text": "Cancel all interviews and declare a team break.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 10,
+            "sanity": 25,
+            "time": -25
+          },
+          "feedback": "You get a nice rest, but lose valuable days of sourcing progress."
+        }
+      ]
+    },
+    {
+      "id": "chaos_ats_bug",
+      "title": "🚨 ATS Auto-Reject!",
+      "description": "A bug in the recruitment software automatically rejects all 150 active candidates in our pipeline.",
+      "choices": [
+        {
+          "text": "Manually email all 150 candidates to explain the error.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 20,
+            "sanity": -40,
+            "time": -20
+          },
+          "feedback": "You spend 12 hours sending emails. Candidates are understanding, but sanity hits rock bottom."
+        },
+        {
+          "text": "Blame the software vendor and ask candidates to reapply.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -30,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "Many candidates refuse to reapply, calling the company disorganized. Sourcing resets."
+        }
+      ]
+    },
+    {
+      "id": "chaos_competitor_double",
+      "title": "🚨 The Salary War!",
+      "description": "A competitor starts paying double our salary range for all engineering roles. Candidates are dropping out of our loops.",
+      "choices": [
+        {
+          "text": "Ask the board for an immediate budget expansion.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": 25,
+            "sanity": -15,
+            "time": 10
+          },
+          "feedback": "Board approves a small hike. You save the pipeline, but budget is tight."
+        },
+        {
+          "text": "Focus on our lifestyle benefits and work hours.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -30,
+            "sanity": 15,
+            "time": -20
+          },
+          "feedback": "Candidates leave for the cash. You must source less experienced candidates. Sourcing slows."
+        }
+      ]
+    },
+    {
+      "id": "chaos_database_dropped",
+      "title": "🚨 Production Dropped!",
+      "description": "A junior developer accidentally drops the production database on their first day. The entire engineering team is redeployed to fix it.",
+      "choices": [
+        {
+          "text": "Cancel all interviews for the next 3 days.",
+          "metrics": {
+            "happiness": -15,
+            "candidate": -15,
+            "sanity": 15,
+            "time": -25
+          },
+          "feedback": "Interviews delayed. Sourcing speed slows, but developers are grateful for the focus."
+        },
+        {
+          "text": "Ask the recruitment team to help restore database backups.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 10,
+            "sanity": -35,
+            "time": 10
+          },
+          "feedback": "You spend the day typing terminal commands. It works! But you have no idea what you did. Sanity lost."
+        }
+      ]
+    },
+    {
+      "id": "chaos_rto_mandate",
+      "title": "🚨 Return to Office!",
+      "description": "The board announces a 5-day mandatory return to office. 40% of our active candidates reject the remote compromise.",
+      "choices": [
+        {
+          "text": "Ask the board for exceptions for critical tech hires.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": 25,
+            "sanity": -20,
+            "time": 10
+          },
+          "feedback": "Board grants a few exceptions. You close the roles, but are viewed as a rule breaker."
+        },
+        {
+          "text": "Enforce RTO and restart the sourcing pipeline.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -35,
+            "sanity": 10,
+            "time": -25
+          },
+          "feedback": "A complete pipeline reset. Sourcing is much harder and candidate rating drops."
+        }
+      ]
+    },
+    {
+      "id": "chaos_comic_sans",
+      "title": "🚨 Brand Disaster!",
+      "description": "The marketing team redesigns the company logo to use Comic Sans font. Candidates are laughing at our website.",
+      "choices": [
+        {
+          "text": "Laugh along and write funny posts about it.",
+          "metrics": {
+            "happiness": 10,
+            "candidate": 20,
+            "sanity": 10,
+            "time": 5
+          },
+          "feedback": "The internet loves the self-deprecating humor. Sourcing proceeds normally."
+        },
+        {
+          "text": "Apologize and promise candidates we are changing it back.",
+          "metrics": {
+            "happiness": -20,
+            "candidate": -10,
+            "sanity": -15,
+            "time": -15
+          },
+          "feedback": "The marketing lead is angry you called their work bad. Friction arises."
+        }
+      ]
+    },
+    {
+      "id": "chaos_shell_script",
+      "title": "🚨 Automation Panic!",
+      "description": "A rumor spreads that the company is writing a shell script to automate all engineering tasks, causing developer panic.",
+      "choices": [
+        {
+          "text": "Hold a town hall meeting to deny the rumor.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 10,
+            "sanity": -15,
+            "time": -15
+          },
+          "feedback": "You calm the team, but spend the afternoon managing corporate PR. Time lost."
+        },
+        {
+          "text": "Use the rumor to screen for candidates who love automation.",
+          "metrics": {
+            "happiness": -25,
+            "candidate": -20,
+            "sanity": 15,
+            "time": 10
+          },
+          "feedback": "Candidates think the company is replacing workers. Sourcing speed crumbles."
+        }
+      ]
+    },
+    {
+      "id": "chaos_parrot_escape",
+      "title": "🚨 Parrot Loose!",
+      "description": "An employee's pet parrot escapes in the office and starts screaming 'REFACTOR REFACTOR' during client calls.",
+      "choices": [
+        {
+          "text": "Help capture the parrot.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": 10,
+            "sanity": -15,
+            "time": -15
+          },
+          "feedback": "You spend 2 hours chasing a bird with a net. Sourcing delayed, but office morale is high."
+        },
+        {
+          "text": "Work from a quiet conference room and ignore it.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": -15,
+            "sanity": 15,
+            "time": 5
+          },
+          "feedback": "You complete your calls, but candidate asks why a bird is screaming code reviews in the background."
+        }
+      ]
+    },
+    {
+      "id": "chaos_ac_break",
+      "title": "🚨 AC Broken!",
+      "description": "The office AC breaks in July. The temperature inside the office is 95 degrees.",
+      "choices": [
+        {
+          "text": "Allow everyone to work remotely for the week.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": 15,
+            "sanity": 20,
+            "time": -15
+          },
+          "feedback": "Everyone is happy and works comfortably. Sourcing speed slows slightly due to coordination."
+        },
+        {
+          "text": "Buy fans and push through in-office.",
+          "metrics": {
+            "happiness": -35,
+            "candidate": -20,
+            "sanity": -25,
+            "time": 10
+          },
+          "feedback": "The office is a sweatshop. Interviewers are grumpy and reject candidates faster. Sanity lost."
+        }
+      ]
+    },
+    {
+      "id": "chaos_reddit_leak",
+      "title": "🚨 Reddit Leak!",
+      "description": "Our custom coding test solution is leaked to Reddit. 90% of applicants are submitting identical solutions.",
+      "choices": [
+        {
+          "text": "Rewrite the coding test immediately.",
+          "metrics": {
+            "happiness": 15,
+            "candidate": -15,
+            "sanity": -25,
+            "time": -20
+          },
+          "feedback": "You spend the weekend writing new coding tests. Sourcing speed drops, but integrity is saved."
+        },
+        {
+          "text": "Verify coding skills in a mandatory live interview instead.",
+          "metrics": {
+            "happiness": -10,
+            "candidate": 10,
+            "sanity": 15,
+            "time": -10
+          },
+          "feedback": "Saves your sanity, but increases the engineering team's interview load."
+        }
+      ]
+    },
+    {
+      "id": "chaos_budget_freeze",
+      "title": "🚨 Budget Freeze!",
+      "description": "Finance freezes all hiring budgets mid-quarter, but the VP wants you to keep pipelines active for 'future roles'.",
+      "choices": [
+        {
+          "text": "Keep sourcing and telling candidates we are 'evaluating'.",
+          "metrics": {
+            "happiness": 20,
+            "candidate": -35,
+            "sanity": -25,
+            "time": -15
+          },
+          "feedback": "Candidates realize we are ghosting them. Recruiter sanity falls and candidate rating drops."
+        },
+        {
+          "text": "Tell the VP we must pause sourcing until budgets open.",
+          "metrics": {
+            "happiness": -35,
+            "candidate": 15,
+            "sanity": 25,
+            "time": 10
+          },
+          "feedback": "VP is furious you aren't 'grinding'. But you protect the candidate experience and save sanity."
+        }
+      ]
+    }
+  ]
+}

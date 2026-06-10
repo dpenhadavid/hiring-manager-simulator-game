@@ -353,13 +353,28 @@
           <span class="logo-emoji">⏰</span>
         </div>
         <h2>The Hiring Manager Simulator</h2>
-        <p class="modal-sub" style="margin-bottom: 25px;">
+        <p class="modal-sub" style="margin-bottom: 20px;">
           Welcome to the ultimate recruitment survival game. Can you manage the ridiculous demands of hiring managers, keep candidates from ghosting, maintain your own sanity, and close 10 hires in 90 days?
         </p>
+        
+        <!-- Recruiter Name Input -->
+        <div class="input-group" style="margin: 15px auto 25px auto; width: 100%; max-width: 350px; display: flex; flex-direction: column; gap: 8px;">
+          <label for="player-name" style="font-family: var(--font-title); font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; text-align: center;">Enter Recruiter Name</label>
+          <input type="text" id="player-name" placeholder="Enter Recruiter Name..." style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.2); color: var(--text-main); font-family: var(--font-body); font-size: 0.9rem; text-align: center; outline: none; transition: border-color 0.2s;" maxlength="25">
+        </div>
+
         <p class="modal-sub" style="font-weight: 700; color: var(--accent-gold); margin-bottom: 25px;">
           Corporate compliance requires all new hires to pass the Recruiter Aptitude Test before starting.
         </p>
         <button class="primary-btn pulse-button" id="go-to-test-btn">Take Aptitude Test</button>
+
+        <!-- Leaderboard Summary -->
+        <div class="leaderboard-preview" style="margin-top: 30px; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 20px; width: 100%;">
+          <h4 style="font-family: var(--font-title); font-size: 0.8rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Corporate High Scores</h4>
+          <div id="start-leaderboard" class="leaderboard-table-container">
+            <!-- Rendered dynamically via JS -->
+          </div>
+        </div>
       </div>
 
       <!-- SCREEN 2: Recruiter Aptitude Test -->
@@ -393,11 +408,98 @@
         <div id="test-feedback-box" class="hidden" style="margin-top: 20px; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.15);">
           <h4 id="test-feedback-title" style="font-family: var(--font-title); font-weight: 700; font-size: 0.95rem; margin-bottom: 6px;">Evaluation:</h4>
           <p id="test-feedback-text" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;"></p>
-          <button class="primary-btn" id="go-to-diff-btn" style="margin-top: 15px; padding: 8px 18px; font-size: 0.85rem; display: block; margin-left: auto;">Proceed to Selection</button>
+          <button class="primary-btn" id="go-to-country-btn" style="margin-top: 15px; padding: 8px 18px; font-size: 0.85rem; display: block; margin-left: auto;">Proceed to Selection</button>
         </div>
       </div>
 
-      <!-- SCREEN 3: Difficulty & Start -->
+      <!-- SCREEN 3: Choose Your Country -->
+      <div id="start-screen-country" class="modal-screen hidden" style="width: 100%;">
+        <div class="start-logo">
+          <span class="logo-emoji">🌍</span>
+        </div>
+        <h2>Choose Your Recruitment Territory</h2>
+        <p class="modal-sub" style="margin-bottom: 20px; max-width: 100%;">
+          Each country has its own local currency, unique hiring culture, and regulatory compliance complexities. Select where you want to build your recruiting career:
+        </p>
+        
+        <div class="country-selection-grid">
+          <!-- United States -->
+          <div class="country-card active" data-country="us">
+            <span class="country-flag">🇺🇸</span>
+            <div class="country-meta">
+              <h4>United States</h4>
+              <p>Budget: USD ($). Vesting cliffs, RSU negotiations, and unlimited PTO disputes.</p>
+            </div>
+          </div>
+
+          <!-- India -->
+          <div class="country-card" data-country="in">
+            <span class="country-flag">🇮🇳</span>
+            <div class="country-meta">
+              <h4>India</h4>
+              <p>Budget: Lakhs (₹). CTC shopping, 90-day notice periods, and joining-day ghosting.</p>
+            </div>
+          </div>
+
+          <!-- United Kingdom & Europe -->
+          <div class="country-card" data-country="eu">
+            <span class="country-flag">🇪🇺</span>
+            <div class="country-meta">
+              <h4>UK & Europe</h4>
+              <p>Budget: EUR/GBP (€/£). 30 days mandatory holidays, visa quotas, and GDPR rules.</p>
+            </div>
+          </div>
+
+          <!-- China -->
+          <div class="country-card" data-country="cn">
+            <span class="country-flag">🇨🇳</span>
+            <div class="country-meta">
+              <h4>China</h4>
+              <p>Budget: CNY (¥). Hyper-speed WeChat pipelines and intense 996 hour burnouts.</p>
+            </div>
+          </div>
+
+          <!-- Singapore -->
+          <div class="country-card" data-country="sg">
+            <span class="country-flag">🇸🇬</span>
+            <div class="country-meta">
+              <h4>Singapore</h4>
+              <p>Budget: SGD ($). Employment Pass point systems and Bali remote offshoring.</p>
+            </div>
+          </div>
+
+          <!-- Japan -->
+          <div class="country-card" data-country="jp">
+            <span class="country-flag">🇯🇵</span>
+            <div class="country-meta">
+              <h4>Japan</h4>
+              <p>Budget: JPY (¥). Hanko stamp approvals, lifetime loyalty, and polite silence.</p>
+            </div>
+          </div>
+
+          <!-- LATAM -->
+          <div class="country-card" data-country="br">
+            <span class="country-flag">🌎</span>
+            <div class="country-meta">
+              <h4>LATAM</h4>
+              <p>Budget: BRL (R$). US nearshore bidding, Contractor vs local CLT benefits.</p>
+            </div>
+          </div>
+
+          <!-- Australia & ANZ -->
+          <div class="country-card" data-country="au">
+            <span class="country-flag">🇦🇺</span>
+            <div class="country-meta">
+              <h4>Australia & ANZ</h4>
+              <p>Budget: AUD ($). Coffee-chat sourcing and strict 5 PM work-life boundaries.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="primary-btn" id="go-to-diff-btn" style="margin-top: 25px;">Proceed to Rank Selection</button>
+      </div>
+
+      <!-- SCREEN 4: Difficulty & Start -->
       <div id="start-screen-diff" class="modal-screen hidden" style="width: 100%;">
         <div class="start-logo">
           <span class="logo-emoji">🏆</span>
@@ -484,7 +586,24 @@
         </div>
       </div>
 
-      <button class="primary-btn" id="restart-game-btn">Update Resume & Try Again</button>
+      <!-- Final Score and Leaderboard -->
+      <div class="final-score-box" style="margin-top: 10px; font-size: 1.1rem; font-family: var(--font-title); font-weight: 800; color: var(--accent-gold);">
+        FINAL SCORE: <span id="defeat-score">0</span> pts
+      </div>
+      <div class="leaderboard-summary-box" style="width: 100%; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 15px; margin-top: 10px; margin-bottom: 10px;">
+        <h4 style="font-family: var(--font-title); font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 8px;">Corporate Standings:</h4>
+        <div id="defeat-leaderboard"></div>
+      </div>
+
+      <div class="modal-buttons" style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+        <button class="github-btn" id="defeat-github-btn">
+          <svg class="github-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+            <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.35 3.06.88.01.47.01.92.01 1.03 0 .21-.15.46-.55.38A8.012 8.012 0 0 1 0 8c0-4.42 3.58-8 8-8z"/>
+          </svg>
+          Submit Score to Leaderboard
+        </button>
+        <button class="primary-btn" id="restart-game-btn" style="width: 100%;">Update Resume & Try Again</button>
+      </div>
     </div>
   </div>
 
@@ -531,7 +650,24 @@
         </div>
       </div>
 
-      <button class="primary-btn gold-btn" id="victory-restart-btn">Start a New Quarter</button>
+      <!-- Final Score and Leaderboard -->
+      <div class="final-score-box" style="margin-top: 10px; font-size: 1.3rem; font-family: var(--font-title); font-weight: 800; color: var(--accent-gold); text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);">
+        FINAL SCORE: <span id="victory-score">0</span> pts
+      </div>
+      <div class="leaderboard-summary-box" style="width: 100%; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 15px; margin-top: 10px; margin-bottom: 10px;">
+        <h4 style="font-family: var(--font-title); font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 8px;">Corporate Standings:</h4>
+        <div id="victory-leaderboard"></div>
+      </div>
+
+      <div class="modal-buttons" style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+        <button class="github-btn" id="victory-github-btn">
+          <svg class="github-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+            <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.35 3.06.88.01.47.01.92.01 1.03 0 .21-.15.46-.55.38A8.012 8.012 0 0 1 0 8c0-4.42 3.58-8 8-8z"/>
+          </svg>
+          Submit Score to Leaderboard
+        </button>
+        <button class="primary-btn gold-btn" id="victory-restart-btn" style="width: 100%;">Start a New Quarter</button>
+      </div>
     </div>
   </div>
 
