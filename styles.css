@@ -1576,4 +1576,9 @@ body {
   opacity: 1;
 }
 
+.country-card * {
+  pointer-events: none;
+}
+
+
 

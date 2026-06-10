@@ -658,6 +658,8 @@ async function fetchScenarios() {
     
     // Initialize decks immediately upon loading
     initDecks();
+    // Update active country indicator
+    updateCountryDisplay();
   } catch (error) {
     console.error("Error loading scenarios.json:", error);
   }
@@ -709,6 +711,27 @@ function drawFromDeck(deckName, originalPool) {
   }
   return state.decks[deckName].pop();
 }
+
+// Update the active territory flag and label in the header
+function updateCountryDisplay() {
+  const display = document.getElementById("current-country-display");
+  if (display) {
+    const reg = REGIONS[state.country] || REGIONS.us;
+    const flags = {
+      us: "🇺🇸",
+      in: "🇮🇳",
+      eu: "🇪🇺",
+      cn: "🇨🇳",
+      sg: "🇸🇬",
+      jp: "🇯🇵",
+      br: "🌎",
+      au: "🇦🇺"
+    };
+    const flag = flags[state.country] || "🇺🇸";
+    display.innerText = `${flag} ${reg.name}`;
+  }
+}
+
 
 // Toast notification helper
 function showToast(message) {
@@ -1664,6 +1687,7 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.add("active");
       
       state.country = card.getAttribute("data-country");
+      updateCountryDisplay();
       synth.playClack();
     });
   });
@@ -1742,6 +1766,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".country-card").forEach(b => b.classList.remove("active"));
     document.querySelector(".country-card[data-country='us']").classList.add("active");
     state.country = 'us';
+    updateCountryDisplay();
     
     // Refresh start screen leaderboard
     renderLeaderboard("start-leaderboard");
